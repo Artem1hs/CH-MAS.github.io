@@ -1,0 +1,183 @@
+.contacts-page {
+  min-height: 100svh;
+}
+
+.contacts-ambient {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 2% -10%, #2768be42, transparent 48%),
+    radial-gradient(ellipse at 95% 65%, #2374a329, transparent 50%),
+    linear-gradient(145deg, #102345, #133360 54%, #103d56);
+}
+
+.contacts-page .site-header { gap: 22px; }
+.contacts-page .nav-links { gap: clamp(15px, 1.8vw, 28px); }
+.contacts-page .nav-links a[aria-current="page"] { color: #fff; }
+.contacts-page .nav-links a[aria-current="page"]::after { transform: scaleX(1); }
+.contacts-page .header-actions { gap: 18px; }
+
+.contacts-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 31px;
+  color: #afc5e1;
+  font-size: 12px;
+}
+
+.contacts-breadcrumbs a:hover { color: #fff; }
+.contacts-breadcrumbs [aria-current] { color: #dbe9ff; }
+
+.contacts-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px 24px;
+  padding-block: clamp(30px, 4.1vw, 57px) clamp(22px, 3vw, 42px);
+}
+
+.contacts-intro h1 {
+  font-size: clamp(48px, 6.65vw, 96px);
+  font-weight: 450;
+  line-height: 1.07;
+  letter-spacing: -.065em;
+}
+
+.contacts-overview {
+  display: grid;
+  grid-template-columns: minmax(0, .83fr) minmax(0, 1.17fr);
+  gap: clamp(14px, 2vw, 30px);
+}
+
+.contacts-info {
+  display: grid;
+  align-content: center;
+  gap: 26px;
+  min-width: 0;
+  padding: clamp(22px, 4vw, 55px);
+  border: 1px solid #a4c7ff38;
+  border-radius: 26px;
+  background: radial-gradient(ellipse at 5% 0%, #4987ef28, transparent 66%), #10274c;
+  box-shadow: 0 20px 55px -30px #0613318c, inset 0 1px 0 #ffffff0a;
+}
+
+.contacts-city {
+  margin-bottom: 8px;
+  color: #a9cbf6;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.contacts-info h2,
+.contacts-entrance h2 {
+  font-size: clamp(29px, 3.35vw, 52px);
+  font-weight: 450;
+  line-height: 1.12;
+  letter-spacing: -.05em;
+}
+
+.contacts-hours {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 17px;
+  padding: 7px 11px;
+  border: 1px solid #b5d98248;
+  border-radius: 99px;
+  color: #dce9c8;
+  font-size: 12px;
+}
+
+.contacts-hours .icon {
+  width: 15px;
+  height: 15px;
+  color: #bad982;
+}
+
+.contacts-channels {
+  display: grid;
+  justify-items: start;
+  padding-top: 17px;
+  border-top: 1px solid #b2d1ff26;
+}
+
+.contacts-phone,
+.contacts-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  transition: color .2s;
+}
+
+.contacts-phone {
+  font-size: clamp(21px, 2.5vw, 35px);
+  font-weight: 550;
+  line-height: 1.2;
+  letter-spacing: -.04em;
+}
+
+.contacts-text-link {
+  color: #e2eeff;
+  font-size: 13px;
+  font-weight: 550;
+}
+
+.contacts-text-link .icon,
+.contacts-phone .icon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  color: #a7caff;
+}
+
+.contacts-phone:hover,
+.contacts-text-link:hover { color: #afceff; }
+.contacts-muted { color: #b3c9e6; }
+.contacts-entrance-link .icon { transform: rotate(90deg); }
+.contacts-page .p-map-open:focus-visible { outline-offset: -6px; }
+.contacts-page .p-map-heading strong { font-size: 14px; }
+.contacts-page .p-map-heading > div > span,
+.contacts-page .p-map-open { font-size: 12px; }
+
+.contacts-entrance {
+  display: grid;
+  grid-template-columns: minmax(0, .83fr) minmax(0, 1.17fr);
+  align-items: center;
+  gap: clamp(25px, 5vw, 72px);
+  margin-top: clamp(50px, 7vw, 100px);
+  padding-block: clamp(26px, 4.5vw, 60px);
+  border-block: 1px solid #b2d1ff26;
+}
+
+.contacts-entrance-copy p {
+  max-width: 33ch;
+  margin-block: 16px;
+  color: #c0d1ea;
+  line-height: 1.65;
+}
+
+.contacts-storefront {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #a4c7ff38;
+  border-radius: 26px;
+}
+
+.contacts-page .site-footer { margin-top: clamp(24px, 4vw, 60px); }
+
+@media (max-width: 760px) {
+  .contacts-page .nav-links { gap: 0; }
+  .contacts-breadcrumbs { padding-top: 24px; }
+  .contacts-overview, .contacts-entrance { grid-template-columns: minmax(0, 1fr); }
+  .contacts-info, .contacts-storefront { border-radius: 21px; }
+  .contacts-info { gap: 18px; }
+}

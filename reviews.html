@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru" class="premium-page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d1935">
+  <title>Отзывы — Честная мастерская</title>
+  <meta name="description" content="Отзывы о Честной мастерской в Челябинске. Подборка отзывов клиентов и ссылка на полную ленту в 2ГИС.">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="preload" href="assets/fonts/manrope-variable.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="minimal.css?v=7">
+  <link rel="stylesheet" href="home.css?v=26">
+  <link rel="stylesheet" href="reviews-page.css">
+  <script src="app.js" defer></script>
+  <script src="reviews-page.js" defer></script>
+</head>
+<body class="premium-home reviews-page">
+  <div class="reviews-ambient" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"></path></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="m7.3 3 3 4.8-2.1 2.1a15 15 0 0 0 5.9 5.9l2.1-2.1 4.8 3-.8 3a2 2 0 0 1-2.2 1.2A20 20 0 0 1 3.1 6 2 2 0 0 1 4.3 3.8Z"></path></symbol>
+  </svg>
+  <div class="p-header-bar">
+    <header class="site-header shell page-header">
+      <a class="brand brand-original" href="index.html" aria-label="Честная мастерская — на главную"><span class="brand-emblem" aria-hidden="true"><img class="logo-image" src="assets/logo.png" alt="" width="320" height="320"></span><span class="brand-name">Честная<br>мастерская</span></a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Открыть меню"><span></span><span></span></button>
+        <div class="nav-links" id="nav-links"><a href="services.html">Услуги</a><a href="workshop.html">Мастерская</a><a href="reviews.html" aria-current="page">Отзывы</a><a href="contacts.html">Контакты</a><a href="partners.html">Партнёры</a></div>
+      </nav>
+      <div class="header-actions"><a class="header-phone" href="tel:+79512448811" aria-label="Позвонить по номеру +7 951 244-88-11"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg><span>+7 951 244-88-11</span></a><a class="button button-primary header-max" href="https://max.ru/join/U9VbQL_vIRLtYc8kHAHTy1KnC3-s3BVJSdOzQISSQKc" target="_blank" rel="noopener noreferrer">Написать в MAX<svg class="icon" aria-hidden="true"><use href="#i-up-right"></use></svg></a></div>
+    </header>
+  </div>
+
+  <main id="main" class="shell">
+    <nav class="reviews-breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a><span aria-hidden="true">/</span><span aria-current="page">Отзывы</span></nav>
+    <section class="reviews-intro" aria-labelledby="reviews-title">
+      <h1 id="reviews-title">Отзывы<br><span>о мастерской</span></h1>
+      <div class="reviews-archive">
+        <span class="reviews-source">2ГИС</span>
+        <p>Все оценки, отзывы и ответы мастерской в карточке 2ГИС</p>
+        <a class="button button-primary" href="https://2gis.ru/chelyabinsk/firm/70000001096238225/tab/reviews" target="_blank" rel="noopener noreferrer">Все отзывы в 2ГИС<svg class="icon" aria-hidden="true"><use href="#i-up-right"></use></svg></a>
+      </div>
+    </section>
+
+    <section class="reviews-collection" aria-labelledby="reviews-collection-title" data-reviews-page>
+      <h2 id="reviews-collection-title">Из отзывов клиентов</h2>
+      <p class="reviews-status" data-reviews-status role="status" hidden></p>
+      <noscript><p class="reviews-status">Отзывы можно прочитать в карточке мастерской в 2ГИС.</p></noscript>
+      <div class="reviews-grid" data-reviews-list></div>
+      <template data-review-template>
+        <article class="reviews-card">
+          <header class="reviews-card-header">
+            <span class="reviews-avatar" aria-hidden="true"></span>
+            <div><h3 class="reviews-author"></h3><time class="reviews-date" hidden></time></div>
+          </header>
+          <p class="reviews-rating"><span class="reviews-stars" aria-hidden="true"></span><span class="p-visually-hidden"></span></p>
+          <blockquote class="reviews-quote"></blockquote>
+        </article>
+      </template>
+    </section>
+  </main>
+
+  <footer class="site-footer shell"><a class="p-footer-name" href="index.html">Честная мастерская</a><div class="footer-links"><a href="services.html">Услуги</a><a href="workshop.html">Мастерская</a><a href="reviews.html" aria-current="page">Отзывы</a><a href="contacts.html">Контакты</a><a href="partners.html">Партнёры</a><a href="index.html#websites">Создание сайтов</a></div><p>Ремонт электроники в Челябинске</p><span>© 2026</span></footer>
+</body>
+</html>

@@ -1,0 +1,163 @@
+/* Additions are restricted to the partners page; shared home styling is reused. */
+.partners-page { min-height: 100svh; }
+.partners-page [hidden] { display: none !important; }
+.partners-page .partners-ambient { position: fixed; z-index: -1; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 2% -10%,#2768be42,transparent 48%),radial-gradient(ellipse at 95% 65%,#2374a329,transparent 50%),linear-gradient(145deg,#102345,#133360 54%,#103d56); }
+.partners-page .site-header { gap: 22px; }
+.partners-page .nav-links { gap: clamp(15px,1.8vw,28px); }
+.partners-page .nav-links a[aria-current="page"] { color: #fff; }
+.partners-page .nav-links a[aria-current="page"]::after { transform: scaleX(1); }
+.partners-page .header-actions { gap: 18px; }
+.partners-page .partners-breadcrumbs { display: flex; flex-wrap: wrap; gap: 12px; color: #a7bfde; font-size: 11px; padding-top: 31px; }
+.partners-page .partners-breadcrumbs a:hover { color: white; }
+.partners-page .partners-breadcrumbs > span:last-child { color: #d9e8ff; }
+.partners-page .partners-intro { display: grid; grid-template-columns: 1.2fr .8fr; align-items: end; gap: 60px; padding-block: 57px 58px; }
+.partners-page .partners-eyebrow { color: #9ec5fb; font-size: 10px; font-weight: 550; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 21px; }
+.partners-page .partners-intro h1 { font-size: clamp(58px,6.65vw,96px); font-weight: 450; letter-spacing: -.065em; line-height: 1.07; }
+.partners-page .partners-intro h1 span { color: #a5c9ff; }
+.partners-page .partners-intro-copy { padding-bottom: 5px; }
+.partners-page .partners-lead { font-size: clamp(21px,2vw,28px); font-weight: 450; letter-spacing: -.035em; line-height: 1.45; }
+.partners-page .partners-intro-copy > p + p { color: #b3c9e6; font-size: 13px; line-height: 1.8; margin-top: 17px; }
+.partners-page .partners-text-link { display: inline-flex; align-items: center; gap: 20px; color: #e3efff; font-size: 12px; font-weight: 550; }
+.partners-page .partners-text-link .icon { width: 17px; height: 17px; transition: transform .25s; }
+.partners-page .partners-text-link:hover { color: #fff; }
+.partners-page .partners-text-link:hover .icon { transform: translate(3px,-2px); }
+.partners-page .partners-intro-copy .partners-text-link { margin-top: 23px; }
+.partners-page .partners-invitation { position: relative; isolation: isolate; display: grid; grid-template-columns: .93fr 1.07fr; align-items: center; border: 1px solid #a1c7ff38; border-radius: 30px; overflow: hidden; background: radial-gradient(ellipse at 100% 10%,#326fcc35,transparent 65%),linear-gradient(135deg,#10284cd9,#0c1f3ddd); box-shadow: inset 0 1px 0 #ffffff08,0 30px 70px -50px #020b22a6; }
+.partners-page .partners-invitation-copy { position: relative; z-index: 2; padding: clamp(30px,4.5vw,65px); padding-right: 15px; }
+.partners-page .partners-pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 11px; border: 1px solid #8fbbfb33; border-radius: 99px; color: #bed9fc; font-size: 10px; line-height: 1.5; }
+.partners-page .partners-pill > span { width: 5px; height: 5px; border-radius: 50%; background: #a9ce83; box-shadow: 0 0 10px #a9ce834d; }
+.partners-page .partners-invitation h2 { margin-top: 23px; font-size: clamp(29px,3vw,44px); font-weight: 450; line-height: 1.18; letter-spacing: -.05em; }
+.partners-page .partners-invitation-copy > p { color: #b1c8e5; max-width: 355px; margin-top: 21px; font-size: 12px; line-height: 1.85; }
+.partners-page .partners-blue-button { margin-top: 28px; color: white; background: #3475df; border-color: #84b1ff66; box-shadow: inset 0 1px 0 #ffffff16,0 12px 30px -18px #367cec; }
+.partners-page .partners-blue-button:hover { background: #4587ef; border-color: #a7ccff; }
+.partners-page .partners-illustration { position: relative; isolation: isolate; min-width: 0; aspect-ratio: 3 / 2; width: 100%; }
+.partners-page .partners-art-halo { position: absolute; z-index: -1; width: 80%; aspect-ratio: 1; left: 24%; top: -28%; border-radius: 50%; background: radial-gradient(circle,#3989f85c,#2864d113 56%,transparent 70%); }
+.partners-page .partners-car-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.partners-page .partners-car-logo { position: absolute; left: 69.45%; top: 40.63%; width: 4.45%; aspect-ratio: 1; height: auto; border: 1px solid white; border-radius: 50%; background: white; transform: translate(-50%,-50%) rotate(-5deg); box-shadow: 0 0 8px #b6d6ff66; }
+.partners-page .partners-art-note { position: absolute; bottom: 6%; left: 16%; right: 12%; color: #91afd5; font-size: 10px; text-align: center; letter-spacing: .035em; }
+.partners-page .partners-collection { margin-top: 15px; }
+.partners-page .partners-collection-heading { display: flex; align-items: end; justify-content: space-between; gap: 35px; padding-top: 36px; border-top: 1px solid #b2d1ff26; margin-bottom: 32px; }
+.partners-page .partners-collection-heading .partners-eyebrow { margin-bottom: 13px; }
+.partners-page .partners-collection-heading h2 { font-size: clamp(30px,3.4vw,48px); font-weight: 450; letter-spacing: -.05em; }
+.partners-page .partners-collection-heading > p { color: #b1c8e5; font-size: 12px; line-height: 1.8; }
+.partners-page .partners-grid { columns: 3; column-gap: 22px; }
+.partners-page .partners-photo-card { min-width: 0; margin: 0 0 28px; break-inside: avoid; }
+.partners-page .partners-photo { position: relative; display: block; padding: 0; width: 100%; overflow: hidden; border: 1px solid #a2c6ff3d; border-radius: 20px; background: #0e2444; text-align: left; transition: border-color .25s,transform .25s; }
+.partners-page .partners-photo:not(:disabled):hover { border-color: #a4cfff; transform: translateY(-3px); }
+.partners-page .partners-photo > img { display: block; width: 100%; height: auto; }
+.partners-page .partners-photo:focus-visible { outline: 2px solid #d9ebff; outline-offset: 5px; }
+.partners-page .partners-photo-hint { position: absolute; left: 15px; bottom: 15px; padding: 6px 11px; border: 1px solid #e4efff26; border-radius: 99px; background: #0a1734d9; color: white; font-size: 10px; line-height: 1.6; -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+.partners-page .partners-photo[aria-disabled="true"] { min-height: 220px; cursor: default; }
+.partners-page .partners-photo[aria-disabled="true"] .partners-photo-hint { display: none; }
+.partners-page .partners-photo-error { position: absolute; inset: 0; display: grid; place-items: center; padding: 28px; font-size: 12px; color: #b6cceb; text-align: center; background: radial-gradient(ellipse at 70% 0%,#3676d940,transparent 70%),#0e2444; }
+.partners-page .partners-photo-card figcaption { padding: 13px 3px 0; font-size: 12px; color: #c3d7f1; line-height: 1.65; overflow-wrap: anywhere; }
+.partners-page .partners-repair-note { display: flex; align-items: center; justify-content: space-between; gap: 25px; margin-top: 43px; padding: 25px 0; border-top: 1px solid #b2d1ff26; border-bottom: 1px solid #b2d1ff26; font-size: 12px; color: #b7cde8; }
+.partners-page .site-footer { margin-top: 70px; }
+.partners-page .footer-links { flex-wrap: wrap; }
+.partners-dialog-open { overflow: hidden; }
+.partners-page .partners-dialog { position: fixed; color: #f8fbff; width: min(1100px,calc(100% - 40px)); max-width: none; max-height: calc(100svh - 40px); margin: auto; padding: 18px 20px; border: 1px solid #a0c6ff45; border-radius: 24px; background: #0c1c35; box-shadow: 0 30px 100px #0009; overflow: auto; }
+.partners-page .partners-dialog::backdrop { background: #020a1be6; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+.partners-page .partners-dialog-toolbar { display: flex; align-items: center; justify-content: space-between; min-height: 42px; gap: 20px; margin-bottom: 14px; }
+.partners-page .partners-dialog-counter { color: #b8ceeb; font-size: 12px; }
+.partners-page .partners-dialog button { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid #d6e8ff40; border-radius: 50%; background: #122b4de6; color: #f8fbff; }
+.partners-page .partners-dialog button:hover { background: #214572; border-color: #c3ddff99; }
+.partners-page .partners-dialog-stage { position: relative; display: grid; place-items: center; min-height: min(55svh,480px); background: #071225; border-radius: 14px; overflow: hidden; }
+.partners-page .partners-dialog-image { width: 100%; height: auto; max-height: calc(100svh - 215px); object-fit: contain; }
+.partners-page .partners-dialog-error { max-width: 370px; padding: 40px 60px; color: #bbd0ed; font-size: 13px; text-align: center; }
+.partners-page .partners-dialog-prev, .partners-page .partners-dialog-next { position: absolute; top: 50%; transform: translateY(-50%); }
+.partners-page .partners-dialog-prev { left: 14px; }
+.partners-page .partners-dialog-prev .icon { transform: rotate(180deg); }
+.partners-page .partners-dialog-next { right: 14px; }
+.partners-page .partners-dialog-caption { padding: 16px 3px 3px; color: #c3d7f1; font-size: 12px; line-height: 1.65; overflow-wrap: anywhere; }
+.partners-page .partners-benefits { padding: 32px 0 40px; border-top: 1px solid #b2d1ff26; border-bottom: 1px solid #b2d1ff26; }
+.partners-page .partners-benefits-heading { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-bottom: 33px; }
+.partners-page .partners-benefits-heading h2 { font-size: clamp(30px,3.4vw,46px); line-height: 1.16; font-weight: 450; letter-spacing: -.045em; }
+.partners-page .partners-benefits-heading p { color: #afc9e7; font-size: 12px; line-height: 1.8; }
+.partners-page .partners-benefits-list { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 40px; }
+.partners-page .partners-benefits-list article + article { border-left: 1px solid #a4c8f726; padding-left: 32px; }
+.partners-page .partners-benefit-icon { display: grid; place-items: center; width: 37px; height: 37px; margin-bottom: 17px; border: 1px solid #a9cdff47; border-radius: 50%; background: #8bb9ff0d; color: #b6d6ff; font-size: 21px; }
+.partners-page .partners-benefits-list h3 { color: #f4f8ff; font-size: 20px; line-height: 1.4; font-weight: 500; letter-spacing: -.025em; }
+.partners-page .partners-benefits-list p { margin-top: 12px; color: #afc9e7; font-size: 12px; line-height: 1.85; }
+.partners-page .partners-sticker-note { display: grid; grid-template-columns: 80px 1fr auto; align-items: center; gap: 29px; margin-top: 38px; padding: 32px; border: 1px solid #b2d1ff2b; border-radius: 24px; background: #173d6738; }
+.partners-page .partners-sticker-note > img { width: 80px; height: 80px; border-radius: 50%; object-fit: contain; }
+.partners-page .partners-sticker-note h2 { color: #f1f7ff; font-size: 22px; font-weight: 450; line-height: 1.4; letter-spacing: -.025em; }
+.partners-page .partners-sticker-note p { max-width: 600px; margin-top: 11px; color: #adc7e4; font-size: 12px; line-height: 1.9; }
+.partners-page .partners-sticker-note .partners-text-link { white-space: nowrap; }
+@media (max-width: 1200px) {
+  .partners-page .header-phone { gap: 5px; }
+  .partners-page .header-max { display: none; }
+  .partners-page .partners-intro { gap: 40px; }
+  .partners-page .partners-invitation-copy { padding: 36px; padding-right: 0; }
+}
+@media (max-width: 900px) {
+  .partners-page .partners-intro { grid-template-columns: 1.1fr .9fr; gap: 28px; padding-block: 44px; }
+  .partners-page .partners-intro h1 { font-size: clamp(48px,7vw,66px); }
+  .partners-page .partners-lead { font-size: 20px; }
+  .partners-page .partners-intro-copy > p + p { font-size: 12px; }
+  .partners-page .partners-invitation h2 { font-size: 30px; }
+  .partners-page .partners-invitation-copy { padding: 30px; padding-right: 0; }
+  .partners-page .partners-invitation-copy > p { font-size: 11px; }
+  .partners-page .partners-invitation .button { font-size: 11px; padding: 14px 18px; }
+  .partners-page .partners-grid { column-count: 2; }
+  .partners-page .partners-benefits-list { gap: 22px; }
+  .partners-page .partners-benefits-list article + article { padding-left: 22px; }
+  .partners-page .partners-benefits-list h3 { font-size: 17px; }
+  .partners-page .partners-sticker-note { grid-template-columns: 68px 1fr; gap: 22px; }
+  .partners-page .partners-sticker-note > img { width: 68px; height: 68px; }
+  .partners-page .partners-sticker-note .partners-text-link { grid-column: 2; }
+}
+@media (max-width: 760px) {
+  .partners-page .site-header { gap: 12px; }
+  .partners-page .header-phone { display: none; }
+  .partners-page .site-nav .nav-links { gap: 0; }
+  .partners-page .partners-breadcrumbs { padding-top: 23px; }
+  .partners-page .partners-intro { grid-template-columns: 1fr; gap: 28px; padding-block: 35px 37px; }
+  .partners-page .partners-intro h1 { font-size: clamp(48px,10.3vw,72px); }
+  .partners-page .partners-eyebrow { font-size: 9px; margin-bottom: 17px; }
+  .partners-page .partners-intro-copy { padding: 0; }
+  .partners-page .partners-intro-copy > p + p { margin-top: 13px; }
+  .partners-page .partners-intro-copy .partners-text-link { margin-top: 18px; }
+  .partners-page .partners-invitation { grid-template-columns: 1fr; border-radius: 24px; }
+  .partners-page .partners-invitation-copy { padding: 0 25px 28px; }
+  .partners-page .partners-invitation-copy > p { font-size: 12px; max-width: 440px; }
+  .partners-page .partners-invitation h2 { font-size: clamp(29px,6.5vw,40px); margin-top: 20px; }
+  .partners-page .partners-illustration { order: -1; width: 100%; margin-top: 0; }
+  .partners-page .partners-art-note { bottom: 8%; }
+  .partners-page .partners-repair-note { align-items: flex-start; gap: 18px; margin-top: 30px; }
+  .partners-page .partners-repair-note > span { max-width: 210px; }
+  .partners-page .partners-repair-note .partners-text-link { flex-shrink: 0; gap: 8px; font-size: 11px; }
+  .partners-page .partners-collection-heading { display: block; padding-top: 28px; }
+  .partners-page .partners-collection-heading > p { margin-top: 16px; }
+  .partners-page .partners-grid { column-gap: 15px; }
+  .partners-page .partners-photo { border-radius: 15px; }
+  .partners-page .partners-photo-hint { font-size: 9px; left: 10px; bottom: 10px; }
+  .partners-page .site-footer { margin-top: 48px; }
+  .partners-page .partners-dialog { width: calc(100% - 20px); max-height: calc(100svh - 20px); padding: 12px; border-radius: 18px; }
+  .partners-page .partners-dialog-image { max-height: calc(100svh - 200px); }
+  .partners-page .partners-dialog-stage { min-height: 40svh; }
+  .partners-page .partners-dialog-prev { left: 8px; }
+  .partners-page .partners-dialog-next { right: 8px; }
+  .partners-page .partners-benefits { padding: 27px 0; }
+  .partners-page .partners-benefits-heading { display: block; margin-bottom: 22px; }
+  .partners-page .partners-benefits-heading h2 br { display: none; }
+  .partners-page .partners-benefits-heading p { margin-top: 17px; }
+  .partners-page .partners-benefits-list { grid-template-columns: 1fr; gap: 0; }
+  .partners-page .partners-benefits-list article { position: relative; padding: 23px 0 23px 57px; }
+  .partners-page .partners-benefits-list article + article { padding-left: 57px; border-left: 0; border-top: 1px solid #a4c8f726; }
+  .partners-page .partners-benefit-icon { position: absolute; top: 24px; left: 0; width: 34px; height: 34px; margin: 0; font-size: 20px; }
+  .partners-page .partners-benefits-list h3 { font-size: 20px; }
+  .partners-page .partners-benefits-list p { margin-top: 9px; }
+  .partners-page .partners-benefits-list p br { display: none; }
+  .partners-page .partners-sticker-note { grid-template-columns: 49px 1fr; padding: 24px 20px; gap: 18px; }
+  .partners-page .partners-sticker-note > img { align-self: start; width: 49px; height: 49px; }
+  .partners-page .partners-sticker-note h2 { font-size: 21px; }
+  .partners-page .partners-sticker-note p { font-size: 11px; }
+}
+@media (max-width: 480px) {
+  .partners-page .partners-grid { column-count: 1; }
+  .partners-page .partners-repair-note { flex-direction: column; }
+  .partners-page .partners-repair-note > span { max-width: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .partners-page .partners-photo, .partners-page .partners-photo > img, .partners-page .partners-text-link .icon { transition: none; }
+}

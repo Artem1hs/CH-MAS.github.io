@@ -1,6 +1,27 @@
 {
   "photos": [
     {
+      "src": "assets/friends/60-lada-2107.webp",
+      "alt": "Человек у тёмно-синей Lada 2107 с наклейкой Честной мастерской",
+      "caption": "Lada 2107",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "src": "assets/friends/65-sticker-pickup.webp",
+      "alt": "Лист круглых наклеек Честной мастерской в кузове пикапа",
+      "caption": "Наклейки для друзей",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "src": "assets/friends/78-renault-kaptur.webp",
+      "alt": "Оранжевый Renault Kaptur с наклейкой Честной мастерской на заднем стекле",
+      "caption": "Renault Kaptur",
+      "width": 1600,
+      "height": 1200
+    },
+    {
       "src": "assets/friends/01-volkswagen-golf.webp",
       "alt": "Volkswagen Golf с круглой наклейкой Честной мастерской на заднем стекле",
       "caption": "Volkswagen Golf",
@@ -398,6 +419,167 @@
       "caption": "Тёмный Hyundai Creta",
       "width": 1920,
       "height": 1440
+    },
+    {
+      "src": "assets/friends/58-tenet-t4l.webp",
+      "alt": "Белый Tenet T4L с наклейкой Честной мастерской на заднем стекле",
+      "caption": "Tenet T4L",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "src": "assets/friends/59-volvo-side.webp",
+      "alt": "Серый Volvo с наклейкой Честной мастерской на боковом стекле",
+      "caption": "Volvo сбоку",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "src": "assets/friends/61-kia-sportage-friends.webp",
+      "alt": "Друзья мастерской у светлого Kia Sportage с наклейкой",
+      "caption": "Друзья у Kia Sportage",
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "src": "assets/friends/62-kia-sportage-sticker.webp",
+      "alt": "Светлый Kia Sportage с наклейкой Честной мастерской на заднем стекле",
+      "caption": "Kia Sportage",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "src": "assets/friends/63-bmw.webp",
+      "alt": "Тёмный BMW с наклейкой Честной мастерской на заднем стекле",
+      "caption": "BMW",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "src": "assets/friends/64-lada-kalina.webp",
+      "alt": "Красная Lada Kalina с наклейкой Честной мастерской на крышке багажника",
+      "caption": "Lada Kalina",
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "src": "assets/friends/66-kaptur-and-mazda2.webp",
+      "alt": "Два автомобиля с наклейками Честной мастерской припаркованы рядом",
+      "caption": "Renault Kaptur и Mazda2",
+      "width": 900,
+      "height": 1600
+    },
+    {
+      "src": "assets/friends/67-blue-car.webp",
+      "alt": "Синий автомобиль с наклейкой Честной мастерской на боковом стекле",
+      "caption": "Синий автомобиль",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "src": "assets/friends/68-civic-parking.webp",
+      "alt": "Серый Honda Civic с наклейкой Честной мастерской на заднем стекле",
+      "caption": "Honda Civic",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "src": "assets/friends/69-silver-toyota.webp",
+      "alt": "Серебристая Toyota с большой круглой наклейкой Честной мастерской",
+      "caption": "Серебристая Toyota",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "src": "assets/friends/70-volvo-740-street.webp",
+      "alt": "Volvo 740 GL с наклейкой Честной мастерской припаркован у тротуара",
+      "caption": "Volvo 740 GL у дороги",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "src": "assets/friends/71-volvo-740-evening.webp",
+      "alt": "Вечерний кадр Volvo 740 GL с наклейкой Честной мастерской",
+      "caption": "Volvo 740 GL вечером",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "src": "assets/friends/72-toyota-raize.webp",
+      "alt": "Синяя Toyota Raize с наклейкой Честной мастерской на двери багажника",
+      "caption": "Toyota Raize",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "src": "assets/friends/73-nissan-march.webp",
+      "alt": "Белый Nissan March с наклейкой Честной мастерской на заднем стекле",
+      "caption": "Nissan March",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "src": "assets/friends/74-friends-at-workshop.webp",
+      "alt": "Автомобили с наклейками припаркованы у вывески Честной мастерской",
+      "caption": "У мастерской",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "src": "assets/friends/75-red-mazda2.webp",
+      "alt": "Красная Mazda2 с наклейкой Честной мастерской на заднем стекле",
+      "caption": "Mazda2",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "src": "assets/friends/76-fiat-albea.webp",
+      "alt": "Fiat Albea с боксом на крыше и наклейкой Честной мастерской",
+      "caption": "Fiat Albea",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "src": "assets/friends/77-honda-civic-street.webp",
+      "alt": "Серый Honda Civic с наклейкой Честной мастерской у городской дороги",
+      "caption": "Honda Civic у мастерской",
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "src": "assets/friends/79-kia-hood.webp",
+      "alt": "Белый Kia с наклейкой Честной мастерской на капоте",
+      "caption": "Kia с наклейкой на капоте",
+      "width": 1319,
+      "height": 1600
+    },
+    {
+      "src": "assets/friends/80-friends-together.webp",
+      "alt": "Друзья мастерской у светлого автомобиля с круглой наклейкой",
+      "caption": "Друзья мастерской",
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "src": "assets/friends/81-red-hatchback.webp",
+      "alt": "Красный хетчбэк с наклейкой Честной мастерской на боковом стекле",
+      "caption": "Красный хетчбэк",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "src": "assets/friends/82-silver-lada-granta.webp",
+      "alt": "Серебристая Lada Granta с наклейкой Честной мастерской на заднем стекле",
+      "caption": "Lada Granta",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "src": "assets/friends/83-lada-largus.webp",
+      "alt": "Светлая Lada Largus с наклейкой Честной мастерской на задней двери",
+      "caption": "Lada Largus",
+      "width": 1600,
+      "height": 1200
     }
   ]
 }

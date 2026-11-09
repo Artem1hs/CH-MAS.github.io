@@ -50,7 +50,10 @@
 .reviews-author { font-size: 15px; font-weight: 650; line-height: 1.4; }
 .reviews-date { color: #bbcee6; font-size: 12px; }
 .reviews-rating { margin: 17px 0 8px; color: #baf08e; font-size: 14px; letter-spacing: .17em; }
-.reviews-quote { color: #e3edff; font-size: 14px; line-height: 1.65; }
+.reviews-quote { color: #e3edff; font-size: 14px; line-height: 1.65; white-space: pre-line; }
+.reviews-more { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 18px; margin-top: 24px; }
+.reviews-more[hidden], .reviews-more button[hidden] { display: none; }
+.reviews-more p { color: #bed1ea; font-size: 13px; }
 @media (max-width: 900px) {
   .reviews-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

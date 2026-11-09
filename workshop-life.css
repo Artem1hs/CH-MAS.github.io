@@ -1,0 +1,200 @@
+.workshop-life {
+  --life-gap: clamp(10px, 1.3vw, 20px);
+  --life-radius: clamp(14px, 1.6vw, 23px);
+  scroll-margin-top: 98px;
+}
+
+.workshop-life-home { margin-top: clamp(42px, 6vw, 94px); }
+
+.workshop-life-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  margin-bottom: clamp(16px, 2vw, 27px);
+}
+
+.workshop-life-heading h2 {
+  font-size: clamp(32px, 4vw, 58px);
+  font-weight: 450;
+  line-height: 1.1;
+  letter-spacing: -.055em;
+}
+
+.workshop-life-eyebrow {
+  margin-bottom: 8px;
+  color: #c4e692;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.workshop-life-heading h2 + p,
+.workshop-life-video-intro h3 + p {
+  max-width: 54ch;
+  margin-top: 10px;
+  color: #d6e5fa;
+  font-size: clamp(13px, 1.2vw, 16px);
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.workshop-life-link {
+  min-height: 38px;
+  font-size: 13px;
+  white-space: normal;
+}
+
+.workshop-life-link .icon { flex: none; }
+
+.workshop-life-preview,
+.workshop-life-photos,
+.workshop-life-video-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) repeat(2, minmax(0, 1fr));
+  gap: var(--life-gap);
+}
+
+.workshop-life-preview .workshop-life-media { height: clamp(230px, 27.4vw, 410px); }
+
+.workshop-life-preview-more { margin-top: var(--life-gap); }
+.workshop-life-preview-more .workshop-life-media { height: clamp(210px, 22vw, 330px); }
+.workshop-life-preview-more .workshop-life-photo-portrait img { object-fit: contain; }
+.workshop-life-works { margin-top: 8px; }
+
+.workshop-life-photo,
+.workshop-life-clip {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 0;
+  border: 1px solid #b8d5ff40;
+  border-radius: var(--life-radius);
+  overflow: hidden;
+  background: #142a49;
+}
+
+.workshop-life-photo:hover { border-color: #bed9ff85; }
+
+.workshop-life-media {
+  display: block;
+  width: 100%;
+  height: clamp(200px, 29vw, 410px);
+  object-fit: cover;
+  background: #0b192e;
+}
+
+video.workshop-life-media { object-fit: contain; }
+.workshop-life-photo-portrait .workshop-life-media { object-position: 50% 57%; }
+
+.workshop-life-home .workshop-life-clip { position: relative; }
+
+.workshop-life-sound:not([hidden]) {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid #f4f8ff80;
+  border-radius: 50%;
+  background: #08182deb;
+  color: #f4f8ff;
+  cursor: pointer;
+}
+
+.workshop-life-sound:hover,
+.workshop-life-sound[aria-pressed="true"] { background: #264f7c; }
+.workshop-life-sound:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.workshop-life-sound .icon { width: 20px; height: 20px; }
+.workshop-life-sound[aria-pressed="false"] .workshop-life-sound-on,
+.workshop-life-sound[aria-pressed="true"] .workshop-life-sound-off { display: none; }
+
+.workshop-life-caption,
+.workshop-life-clip-caption {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+  min-height: 43px;
+  padding: 9px clamp(10px, 1.35vw, 17px);
+  color: #f7faff;
+  font-size: clamp(12px, 1.2vw, 15px);
+  font-weight: 650;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.workshop-life-clip-caption {
+  display: grid;
+  align-content: center;
+  gap: 4px;
+}
+
+.workshop-life-clip-caption span {
+  color: #bfd4f0;
+  font-size: .8em;
+  font-weight: 550;
+}
+
+.workshop-life-video-row {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 620px;
+  margin: var(--life-gap) auto 0;
+}
+
+.workshop-life-video-intro {
+  display: grid;
+  align-content: center;
+  padding: clamp(18px, 3vw, 40px);
+  border: 1px solid #b8d5ff38;
+  border-radius: var(--life-radius);
+  background: linear-gradient(145deg, #81b1f51c, #122a4b70);
+}
+
+.workshop-life-video-intro h3 {
+  font-size: clamp(20px, 2.3vw, 32px);
+  font-weight: 550;
+  line-height: 1.2;
+  letter-spacing: -.04em;
+}
+
+.workshop-life-feature {
+  display: grid;
+  grid-template-columns: minmax(160px, 210px) minmax(0, 1fr);
+  max-width: 850px;
+  margin-top: 14px;
+}
+
+.workshop-life-feature .workshop-life-video-intro { border: 0; border-radius: 0; }
+.workshop-life-feature .workshop-life-media { height: auto; aspect-ratio: 9 / 16; }
+
+@media (max-width: 760px) {
+  .workshop-life-preview,
+  .workshop-life-photos,
+  .workshop-life-video-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .workshop-life-preview .workshop-life-media { height: auto; aspect-ratio: 4 / 5; }
+  .workshop-life-preview .workshop-life-photo-lead img { aspect-ratio: 4 / 3; }
+  .workshop-life-preview .workshop-life-reception-video video { aspect-ratio: 16 / 9; }
+
+  .workshop-life-reception-video,
+  .workshop-life-photo-lead,
+  .workshop-life-video-intro { grid-column: 1 / -1; }
+
+  .workshop-life-media { height: auto; aspect-ratio: 4 / 5; }
+  .workshop-life-photo-lead .workshop-life-media { aspect-ratio: 4 / 3; }
+  .workshop-life-feature { grid-template-columns: minmax(0, 1fr); }
+  .workshop-life-feature .workshop-life-media { aspect-ratio: 4 / 3; height: auto; max-height: 350px; }
+}
+
+@media (max-width: 350px) {
+  .workshop-life-preview,
+  .workshop-life-video-row { grid-template-columns: minmax(0, 1fr); }
+  video.workshop-life-media { aspect-ratio: 3 / 4; max-height: 320px; }
+}

@@ -3,7 +3,13 @@
   const list = section.querySelector('[data-reviews-list]');
   const status = section.querySelector('[data-reviews-status]');
   const template = section.querySelector('[data-review-template]');
+  const controls = section.querySelector('[data-reviews-more]');
+  const progress = controls.querySelector('[data-reviews-progress]');
+  const more = controls.querySelector('button');
   const formatDate = new Intl.DateTimeFormat('ru-RU', { dateStyle: 'long', timeZone: 'UTC' });
+  const pageSize = 12;
+  let cards = [];
+  let shown = 0;
 
   function renderReview(review) {
     if (typeof review?.author !== 'string' || !review.author.trim() ||
@@ -31,21 +37,41 @@
     return card;
   }
 
+  function showNextPage() {
+    const next = cards.slice(shown, shown + pageSize);
+    list.append(...next);
+    shown += next.length;
+    progress.textContent = `Показано ${shown} из ${cards.length}`;
+    if (shown === cards.length && document.activeElement === more) progress.focus({ preventScroll: true });
+    more.hidden = shown === cards.length;
+  }
+
+  async function readCards(path) {
+    const response = await fetch(path);
+    if (!response.ok) throw new Error('Review feed unavailable');
+    const { reviews } = await response.json();
+    const result = reviews.map(renderReview).filter(Boolean);
+    if (!result.length) throw new Error('Review feed is empty');
+    return result;
+  }
+
   async function loadReviews() {
     status.textContent = 'Загружаем отзывы…';
     status.hidden = false;
-    try {
-      const response = await fetch('assets/reviews-2gis.json');
-      if (!response.ok) throw new Error('Review feed unavailable');
-      const { reviews } = await response.json();
-      const cards = reviews.map(renderReview).filter(Boolean);
-      if (!cards.length) throw new Error('Review feed is empty');
-      list.replaceChildren(...cards);
-      status.hidden = true;
-    } catch {
-      status.textContent = 'Подборка сейчас недоступна. Все отзывы можно прочитать в 2ГИС.';
+    for (const path of ['assets/reviews-import/metallurgov-70.json', 'assets/reviews-2gis.json']) {
+      try {
+        cards = await readCards(path);
+        controls.hidden = false;
+        showNextPage();
+        status.hidden = true;
+        return;
+      } catch {
+        // The short local selection remains usable when the archive is unavailable.
+      }
     }
+    status.textContent = 'Подборка сейчас недоступна. Все отзывы можно прочитать в 2ГИС.';
   }
 
+  more.addEventListener('click', showNextPage);
   loadReviews();
 })();

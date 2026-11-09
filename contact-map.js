@@ -2,8 +2,8 @@
   'use strict';
 
   const name = 'Честная мастерская';
-  const address = 'Челябинск, улица Румянцева, 38';
-  const mapLink = 'https://yandex.ru/maps/org/chestnaya_masterskaya/51923940691/';
+  const address = 'Челябинск, шоссе Металлургов, 70';
+  const mapLink = 'https://2gis.ru/chelyabinsk/firm/70000001096238225';
   let leafletPromise;
 
   const hasLeaflet = () => window.L && typeof window.L.map === 'function' &&
@@ -110,10 +110,10 @@
         const location = document.createElement('p');
         location.textContent = canvas.dataset.mapAddress || address;
         const link = document.createElement('a');
-        link.href = canvas.closest('.p-map-frame')?.querySelector('[data-map-fallback] a')?.href || mapLink;
+        link.href = canvas.dataset.mapLink || mapLink;
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
-        link.textContent = 'Открыть в Яндекс Картах';
+        link.textContent = 'Открыть в 2ГИС';
         popup.append(heading, location, link);
         marker.bindPopup(popup, {maxWidth: 240, minWidth: 160, offset: [0, -58], autoPanPadding: [16, 16]});
         clearFallback();

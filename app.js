@@ -39,24 +39,27 @@
   const caption = dialog.querySelector('.dialog-caption');
   const counter = dialog.querySelector('.photo-counter');
   const closeButton = dialog.querySelector('.dialog-close');
+  let activePhotos = photos;
   let current = 0;
   let openedFrom = null;
 
   const showPhoto = (index) => {
-    current = (index + photos.length) % photos.length;
-    const photo = photos[current];
+    current = (index + activePhotos.length) % activePhotos.length;
+    const photo = activePhotos[current];
     image.src = photo.href;
     image.alt = photo.querySelector('img').alt;
     caption.textContent = photo.dataset.caption;
-    counter.textContent = `${current + 1} / ${photos.length}`;
+    counter.textContent = `${current + 1} / ${activePhotos.length}`;
   };
 
-  photos.forEach((photo, index) => {
+  photos.forEach((photo) => {
     photo.addEventListener('click', (event) => {
       if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
       openedFrom = photo;
-      showPhoto(index);
+      const group = photo.dataset.galleryGroup;
+      activePhotos = photos.filter((item) => item.dataset.galleryGroup === group);
+      showPhoto(activePhotos.indexOf(photo));
       dialog.showModal();
       document.documentElement.classList.add('dialog-open');
       closeButton.focus();

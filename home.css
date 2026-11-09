@@ -33,10 +33,7 @@ html:not(.js) .p-ambient-field { animation: none; }
 .premium-home .site-header .brand-emblem .logo-image { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; padding: 0px; background: #fff; filter: none; }
 .premium-home .brand-name { font-size: 14px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.25; }
 .premium-home .nav-links { gap: 30px; font-size: 12px; color: #bdcce6; }
-.premium-home .nav-links a { position: relative; border: 0px; transition: color 0.25s; }
-.premium-home .nav-links a::after { content: ""; position: absolute; height: 1px; left: 0px; right: 0px; bottom: 4px; background: #bedc87; transform: scaleX(0); transform-origin: left center; transition: transform 0.35s; }
-.premium-home .nav-links a:hover, .premium-home .nav-links a[aria-current="location"] { color: white; }
-.premium-home .nav-links a:hover::after, .premium-home .nav-links a[aria-current="location"]::after { transform: scaleX(1); }
+.premium-home .nav-links a[aria-current="location"] { color: white; }
 .premium-home .header-phone { font-size: 12px; font-weight: 500; }
 .premium-home .header-actions { gap: 24px; }
 .premium-home .button { border-radius: 99px; min-height: 54px; padding: 16px 25px; font-weight: 600; font-size: 12px; transition: transform 0.35s, background 0.35s, border-color 0.35s, box-shadow 0.35s; }
@@ -376,7 +373,6 @@ html:not(.js) .p-ambient-field { animation: none; }
   .premium-home .site-header .header-phone span { display: none; }
   .premium-home .header-phone .icon { width: 15px; height: 15px; }
   html.js .premium-home .nav-links { max-height: calc(100dvh - 90px); overflow-y: auto; overscroll-behavior: contain; background: #12223e; border-color: rgba(255, 255, 255, 0.16); border-radius: 15px; box-shadow: rgba(0, 0, 0, 0.6) 0px 20px 60px; }
-  .premium-home .nav-links a::after { display: none; }
   .premium-home .button { min-height: 48px; padding: 14px 20px; font-size: 11px; }
   .p-ambient-primary { left: -160%; top: -70%; }
   .p-ambient-secondary { right: -170%; bottom: -55%; }

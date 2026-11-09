@@ -16,7 +16,6 @@
 .contacts-page .site-header { gap: 22px; }
 .contacts-page .nav-links { gap: clamp(15px, 1.8vw, 28px); }
 .contacts-page .nav-links a[aria-current="page"] { color: #fff; }
-.contacts-page .nav-links a[aria-current="page"]::after { transform: scaleX(1); }
 .contacts-page .header-actions { gap: 18px; }
 
 .contacts-breadcrumbs {

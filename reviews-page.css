@@ -9,7 +9,6 @@
               linear-gradient(145deg, #102345, #133360 58%, #103d56);
 }
 .reviews-page .nav-links a[aria-current="page"] { color: #fff; }
-.reviews-page .nav-links a[aria-current="page"]::after { transform: scaleX(1); }
 .reviews-page .reviews-breadcrumbs { display: flex; flex-wrap: wrap; gap: 12px; padding-top: 31px; color: #bdd2ed; font-size: 12px; }
 .reviews-page .reviews-breadcrumbs a:hover { color: #fff; }
 .reviews-intro {

@@ -9,7 +9,6 @@
               linear-gradient(145deg, #102345, #133360 58%, #103d56);
 }
 .workshop-page .nav-links a[aria-current="page"] { color: #fff; }
-.workshop-page .nav-links a[aria-current="page"]::after { transform: scaleX(1); }
 .workshop-breadcrumbs { display: flex; gap: 12px; padding-top: 31px; color: #bed2ed; font-size: 12px; }
 .workshop-breadcrumbs a:hover { color: #fff; }
 .workshop-hero {

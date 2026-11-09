@@ -19,7 +19,6 @@
 }
 
 .services-page .nav-links a[aria-current="page"] { color: #fff; }
-.services-page .nav-links a[aria-current="page"]::after { transform: scaleX(1); }
 
 .catalog-breadcrumbs {
   display: flex;

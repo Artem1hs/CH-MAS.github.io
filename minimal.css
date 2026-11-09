@@ -46,10 +46,20 @@ a:focus-visible, button:focus-visible { outline: 3px solid #3372b5; outline-offs
 .brand { flex-shrink: 0; line-height: 0; }
 .logo-image { width: 86px; height: 86px; object-fit: contain; border-radius: 50%; }
 .nav-links { display: flex; align-items: center; gap: 27px; font-size: 13px; }
-.nav-links a { padding-block: 10px; border-bottom: 1px solid transparent; }
-.nav-links a:hover, .nav-links a[aria-current=page] { border-color: var(--brand); }
-.site-header .nav-links a { position: relative; display: flex; align-items: center; min-height: 44px; }
+.site-header .nav-links a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding-block: 10px;
+  border-radius: 8px;
+  transition: background-color .2s, color .2s;
+}
+.site-header .nav-links a:is(:active, :focus-visible) { background-color: var(--hover); color: var(--text); }
 .site-header .nav-links a:focus-visible { outline-offset: -3px; }
+@media (hover: hover) {
+  .site-header .nav-links a:hover { background-color: var(--hover); color: var(--text); }
+}
 @media (min-width: 761px) {
   .site-header .site-nav .nav-links { gap: 0; }
   .site-header .nav-links a { padding-inline: clamp(7px, .9vw, 14px); }

@@ -5,7 +5,6 @@
 .partners-page .site-header { gap: 22px; }
 .partners-page .nav-links { gap: clamp(15px,1.8vw,28px); }
 .partners-page .nav-links a[aria-current="page"] { color: #fff; }
-.partners-page .nav-links a[aria-current="page"]::after { transform: scaleX(1); }
 .partners-page .header-actions { gap: 18px; }
 .partners-page .partners-breadcrumbs { display: flex; flex-wrap: wrap; gap: 12px; color: #a7bfde; font-size: 11px; padding-top: 31px; }
 .partners-page .partners-breadcrumbs a:hover { color: white; }

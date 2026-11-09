@@ -57,8 +57,20 @@ a:focus-visible, button:focus-visible { outline: 3px solid #3372b5; outline-offs
 }
 .site-header .nav-links a:is(:active, :focus-visible) { background-color: var(--hover); color: var(--text); }
 .site-header .nav-links a:focus-visible { outline-offset: -3px; }
-@media (hover: hover) {
-  .site-header .nav-links a:hover { background-color: var(--hover); color: var(--text); }
+@media (min-width: 761px) and (hover: hover) {
+  .site-header .nav-links a:hover { color: var(--text); }
+  .site-header .nav-links a::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 4px;
+    height: 1px;
+    background: var(--brand);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform .35s;
+    pointer-events: none;
+  }
+  .site-header .nav-links a:hover::after { transform: scaleX(1); }
 }
 @media (min-width: 761px) {
   .site-header .site-nav .nav-links { gap: 0; }

@@ -15,10 +15,10 @@
   <link rel="stylesheet" href="minimal.css?v=7">
   <link rel="stylesheet" href="home.css?v=26">
   <link rel="stylesheet" href="home-sections.css?v=6">
-  <link rel="stylesheet" href="partners.css?v=3">
+  <link rel="stylesheet" href="partners.css?v=4">
   <link rel="stylesheet" href="partners-offer.css?v=1">
   <script src="app.js" defer></script>
-  <script src="partners-gallery.js?v=2" defer></script>
+  <script src="partners-gallery.js?v=3" defer></script>
 </head>
 <body class="premium-home partners-page">
   <div class="partners-ambient" aria-hidden="true"></div>
@@ -96,7 +96,11 @@
 
     <section class="partners-collection" data-partners-collection hidden aria-labelledby="collection-title">
       <div class="partners-collection-heading"><div><h2 id="collection-title" data-partners-heading tabindex="-1">Свои на дорогах</h2></div><p>Разные машины. Один круг друзей.<br>Нажмите на фото — рассмотрим поближе.</p></div>
-      <div class="partners-grid" data-partners-grid></div>
+      <div class="partners-grid" id="partners-grid" data-partners-grid></div>
+      <div class="partners-more">
+        <p data-partners-progress role="status"></p>
+        <button class="button button-primary" type="button" data-partners-more aria-controls="partners-grid" hidden>Показать больше</button>
+      </div>
     </section>
 
     <section class="partners-sticker-note" aria-labelledby="sticker-title">

@@ -41,6 +41,8 @@
 .partners-page .partners-collection-heading h2 { font-size: clamp(30px,3.4vw,48px); font-weight: 450; letter-spacing: -.05em; }
 .partners-page .partners-collection-heading > p { color: #b1c8e5; font-size: 12px; line-height: 1.8; }
 .partners-page .partners-grid { columns: 3; column-gap: 22px; }
+.partners-page .partners-more { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 18px; }
+.partners-page .partners-more p { color: #bed1ea; font-size: 13px; }
 .partners-page .partners-photo-card { min-width: 0; margin: 0 0 28px; break-inside: avoid; }
 .partners-page .partners-photo { position: relative; display: block; padding: 0; width: 100%; overflow: hidden; border: 1px solid #a2c6ff3d; border-radius: 20px; background: #0e2444; text-align: left; transition: border-color .25s,transform .25s; }
 .partners-page .partners-photo:not(:disabled):hover { border-color: #a4cfff; transform: translateY(-3px); }

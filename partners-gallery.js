@@ -33,12 +33,14 @@
 
   const init = root => {
     const grid = root.querySelector('[data-partners-grid]');
+    const more = root.querySelector('[data-partners-more]');
+    const progress = root.querySelector('[data-partners-progress]');
     const empty = root.querySelector('[data-partners-empty]');
     const collection = root.querySelector('[data-partners-collection]');
     const heading = root.querySelector('[data-partners-heading]');
     const title = root.querySelector('[data-partners-title]');
     const dialog = root.querySelector('[data-partners-dialog]');
-    if (!grid || !empty || !collection || !dialog || root.dataset.partnersReady) return;
+    if (!grid || !more || !progress || !empty || !collection || !dialog || root.dataset.partnersReady) return;
     root.dataset.partnersReady = 'true';
 
     const image = dialog.querySelector('[data-partners-image]');
@@ -50,6 +52,7 @@
     const next = dialog.querySelector('[data-partners-next]');
     const canOpen = typeof dialog.showModal === 'function' && image && caption && counter && error && close && prev && next;
     let photos = [], current = 0, openedFrom = null, generation = 0;
+    let shown = 0;
     const broken = new Set();
 
     const showPhoto = index => {
@@ -110,9 +113,10 @@
       });
     }
 
-    const render = () => {
-      if (!photos.length) return;
-      const cards = photos.map((photo, index) => {
+    const render = count => {
+      if (shown >= photos.length) return;
+      const cards = photos.slice(shown, shown + count).map((photo, offset) => {
+        const index = shown + offset;
         const figure = document.createElement('figure');
         figure.className = 'partners-photo-card';
         const trigger = document.createElement(canOpen ? 'button' : 'a');
@@ -164,10 +168,16 @@
         });
         return figure;
       });
-      grid.replaceChildren(...cards);
+      grid.append(...cards);
+      shown += cards.length;
+      progress.textContent = `Показано ${shown} из ${photos.length}`;
+      more.hidden = shown >= photos.length;
       empty.hidden = true;
       collection.hidden = false;
+      return cards[0].querySelector('[data-partners-photo]');
     };
+
+    more.addEventListener('click', () => render(10)?.focus());
 
     const loadFeed = async () => {
       if (root.dataset.partnersFeed !== 'assets/friends-gallery.json') return;
@@ -190,7 +200,7 @@
           const sized = [photo.width, photo.height].every(value => Number.isInteger(value) && value >= 1 && value <= 20000);
           return [{src, caption, alt:alt || caption || 'Автомобиль друга Честной мастерской', width:sized ? photo.width : 1200, height:sized ? photo.height : 900}];
         });
-        render();
+        render(4);
       } catch {
         // The finished invitation stays available if the public manifest fails.
       } finally { window.clearTimeout(timeout); }

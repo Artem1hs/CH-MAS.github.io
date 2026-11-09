@@ -48,29 +48,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid #3372b5; outline-offs
 .nav-links { display: flex; align-items: center; gap: 27px; font-size: 13px; }
 .nav-links a { padding-block: 10px; border-bottom: 1px solid transparent; }
 .nav-links a:hover, .nav-links a[aria-current=page] { border-color: var(--brand); }
-.site-header::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0;
-  height: 2px;
-  pointer-events: none;
-  background: linear-gradient(90deg, #a497e7, #71bfd9 35%, #c1de8c 65%, #a497e7);
-  background-size: 200% 100%;
-  animation: menu-line 6s ease-in-out infinite alternate;
-}
-@keyframes menu-line { to { background-position: 100% 50%; } }
 .site-header .nav-links a { position: relative; display: flex; align-items: center; min-height: 44px; }
 .site-header .nav-links a:focus-visible { outline-offset: -3px; }
-.site-header .nav-links a + a::before {
-  content: "";
-  position: absolute;
-  inset: 50% auto auto 0;
-  width: 1px;
-  height: 14px;
-  transform: translateY(-50%);
-  background: var(--line);
-  pointer-events: none;
-}
 @media (min-width: 761px) {
   .site-header .site-nav .nav-links { gap: 0; }
   .site-header .nav-links a { padding-inline: clamp(7px, .9vw, 14px); }
@@ -85,15 +64,14 @@ a:focus-visible, button:focus-visible { outline: 3px solid #3372b5; outline-offs
     overscroll-behavior: contain;
   }
   html.js .site-header .nav-links a { padding-inline: 19px; }
-  html.js .site-header .nav-links a + a::before {
+  html.js .site-header .nav-links.is-open a + a::before {
+    content: "";
+    position: absolute;
     inset: 0 19px auto;
-    width: auto;
     height: 1px;
-    transform: none;
+    background: var(--line);
+    pointer-events: none;
   }
-}
-@media (prefers-reduced-motion: reduce) {
-  .site-header::after { animation: none; background-size: 100% 100%; }
 }
 .header-actions { display: flex; align-items: center; gap: 22px; }
 .header-phone { display: inline-flex; align-items: center; gap: 9px; font-weight: 600; font-size: 13px; white-space: nowrap; }

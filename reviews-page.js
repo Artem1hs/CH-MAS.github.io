@@ -14,14 +14,14 @@
   function renderReview(review) {
     if (typeof review?.author !== 'string' || !review.author.trim() ||
         typeof review.text !== 'string' || !review.text.trim() ||
-        !Number.isInteger(review.rating) || review.rating < 1 || review.rating > 5) return null;
+        review.rating !== 5) return null;
 
     const card = template.content.cloneNode(true);
     const author = review.author.trim();
     card.querySelector('.reviews-avatar').textContent = Array.from(author)[0].toLocaleUpperCase('ru-RU');
     card.querySelector('.reviews-author').textContent = author;
-    card.querySelector('.reviews-stars').textContent = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
-    card.querySelector('.reviews-rating .p-visually-hidden').textContent = `Оценка ${review.rating} из 5`;
+    card.querySelector('.reviews-stars').textContent = '★★★★★';
+    card.querySelector('.reviews-rating .p-visually-hidden').textContent = 'Оценка 5 из 5';
     card.querySelector('.reviews-quote').textContent = review.text.trim();
 
     if (typeof review.date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(review.date)) {

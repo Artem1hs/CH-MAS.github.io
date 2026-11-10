@@ -223,18 +223,6 @@ html:not(.js) .p-ambient-field { animation: none; }
 .p-workshop-facts span { display: block; color: #bdcce6; font-size: 11px; margin-bottom: 6px; }
 .p-workshop-facts strong { font-size: 15px; font-weight: 500; }
 .p-workshop-copy > .p-text-link { margin-top: 30px; }
-.p-gallery { display: grid; grid-template-columns: 1.4fr 1fr 1fr; grid-template-rows: 270px 270px; gap: 17px; }
-.p-gallery-item { position: relative; display: block; min-width: 0px; overflow: hidden; border-radius: 22px; background: #11243d; }
-.p-gallery-item:first-child { grid-row: span 2; }
-.p-gallery-item > img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.5s; opacity: 1; }
-.p-gallery-item:hover > img { transform: scale(1.065); opacity: 1; }
-.p-gallery-item:nth-child(2) > img { object-position: 50% 28%; }
-.p-gallery-item:nth-child(5) > img { object-position: 70% 50%; }
-.p-gallery-item::after { content: ""; position: absolute; inset: 40% 0px 0px; background: linear-gradient(transparent, rgba(0, 0, 0, 0.867)); pointer-events: none; }
-.p-gallery-label { position: absolute; z-index: 1; bottom: 23px; left: 21px; right: 21px; display: flex; gap: 12px; align-items: center; justify-content: space-between; font-size: 11px; line-height: 1.5; }
-.p-gallery-item:first-child .p-gallery-label { font-size: 16px; bottom: 28px; left: 27px; right: 27px; }
-.p-gallery-label > svg { width: 25px; height: 25px; padding: 4px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 50%; transition: transform 0.5s; }
-.p-gallery-item:hover .p-gallery-label > svg { transform: rotate(90deg); }
 .p-reviews { --reviews-visible: 3; --reviews-gap: 20px; margin-top: 150px; }
 .p-reviews-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; margin-bottom: 34px; }
 .p-reviews h2 { font-size: clamp(34px,4.4vw,68px); font-weight: 450; line-height: 1.12; letter-spacing: -.055em; }
@@ -350,8 +338,6 @@ html:not(.js) .p-ambient-field { animation: none; }
   .p-device-visual { flex-basis: 220px; height: 220px; }
   .p-workshop { gap: 35px; }
   .p-workshop-facts { grid-template-columns: 1fr; }
-  .p-gallery { grid-template-columns: 1.25fr 1fr; grid-template-rows: repeat(3, 230px); }
-  .p-gallery-item:last-child { grid-column: span 2; }
   .p-contact-grid { gap: 30px; }
   .p-contact-address { padding-left: 26px; }
   .p-contact-phone { font-size: 24px; }
@@ -427,12 +413,6 @@ html:not(.js) .p-ambient-field { animation: none; }
   .p-workshop-facts span { font-size: 10px; }
   .p-workshop-facts strong { font-size: 14px; }
   .p-workshop-copy > .p-text-link { margin-top: 24px; }
-  .p-gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 390px 230px 230px; gap: 11px; }
-  .p-gallery-item { border-radius: 18px; }
-  .p-gallery-item:first-child { grid-area: auto / span 2; }
-  .p-gallery-label { left: 13px; right: 13px; bottom: 16px; font-size: 10px; }
-  .p-gallery-item:first-child .p-gallery-label { left: 20px; right: 20px; bottom: 22px; font-size: 14px; }
-  .p-gallery-label > svg { width: 21px; height: 21px; }
   .p-reviews { --reviews-visible: 1; --reviews-gap: 16px; margin-top: 95px; }
   .p-reviews-head { display: block; margin-bottom: 25px; }
   .p-reviews h2 { font-size: 36px; }

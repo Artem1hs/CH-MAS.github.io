@@ -12,12 +12,12 @@
   <meta property="og:locale" content="ru_RU">
   <link rel="icon" href="assets/logo.png" type="image/png">
   <link rel="preload" href="assets/fonts/manrope-variable.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="minimal.css?v=11">
+  <link rel="stylesheet" href="minimal.css?v=12">
   <link rel="stylesheet" href="home.css?v=27">
-  <link rel="stylesheet" href="services-page.css?v=1">
-  <link rel="stylesheet" href="service-works.css">
+  <link rel="stylesheet" href="services-page.css?v=3">
+  <link rel="stylesheet" href="photo-wall.css?v=1">
   <script src="app.js" defer></script>
-  <script src="services-page.js" defer></script>
+  <script src="services-page.js?v=2" defer></script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"LocalBusiness","name":"Честная мастерская","description":"Ремонт телефонов, компьютеров и другой электроники","telephone":"+79512448811","email":"masterskaya74@list.ru","address":{"@type":"PostalAddress","streetAddress":"шоссе Металлургов, 70","addressLocality":"Челябинск","addressCountry":"RU"},"openingHours":["Mo-Su 10:00-20:00"]}
   </script>
@@ -134,25 +134,26 @@
       </div>
       <div class="catalog-photo-section">
         <h3>Фото iPhone в мастерской</h3>
-        <div class="catalog-photo-grid">
-          <a href="assets/repair-iphone-01.webp" data-gallery data-gallery-group="iphone" data-caption="Четыре синих iPhone" aria-label="Увеличить фото — Четыре синих iPhone">
+        <div class="catalog-photo-grid photo-wall">
+          <!-- CMS_PHOTO:iphone-01 --><a href="assets/repair-iphone-01.webp" data-gallery data-gallery-group="iphone" data-caption="Четыре синих iPhone" aria-label="Увеличить фото — Четыре синих iPhone">
             <img src="assets/repair-iphone-01.webp" alt="Четыре синих iPhone" width="960" height="1280" loading="lazy" decoding="async">
-          </a>
-          <a href="assets/repair-iphone-02.webp" data-gallery data-gallery-group="iphone" data-caption="Два iPhone с тройной камерой" aria-label="Увеличить фото — Два iPhone с тройной камерой">
+          </a><!-- /CMS_PHOTO -->
+          <!-- CMS_PHOTO:iphone-02 --><a href="assets/repair-iphone-02.webp" data-gallery data-gallery-group="iphone" data-caption="Два iPhone с тройной камерой" aria-label="Увеличить фото — Два iPhone с тройной камерой">
             <img src="assets/repair-iphone-02.webp" alt="Два iPhone с тройной камерой" width="960" height="1280" loading="lazy" decoding="async">
-          </a>
-          <a href="assets/repair-iphone-03.webp" data-gallery data-gallery-group="iphone" data-caption="iPhone со снятым задним стеклом" aria-label="Увеличить фото — iPhone со снятым задним стеклом">
+          </a><!-- /CMS_PHOTO -->
+          <!-- CMS_PHOTO:iphone-03 --><a href="assets/repair-iphone-03.webp" data-gallery data-gallery-group="iphone" data-caption="iPhone со снятым задним стеклом" aria-label="Увеличить фото — iPhone со снятым задним стеклом">
             <img src="assets/repair-iphone-03.webp" alt="iPhone со снятым задним стеклом" width="960" height="1280" loading="lazy" decoding="async">
-          </a>
-          <a href="assets/repair-iphone-04.webp" data-gallery data-gallery-group="iphone" data-caption="Повреждённые задние стёкла iPhone" aria-label="Увеличить фото — Повреждённые задние стёкла iPhone">
+          </a><!-- /CMS_PHOTO -->
+          <!-- CMS_PHOTO:iphone-04 --><a href="assets/repair-iphone-04.webp" data-gallery data-gallery-group="iphone" data-caption="Повреждённые задние стёкла iPhone" aria-label="Увеличить фото — Повреждённые задние стёкла iPhone">
             <img src="assets/repair-iphone-04.webp" alt="Повреждённые задние стёкла iPhone" width="960" height="1280" loading="lazy" decoding="async">
-          </a>
-          <a href="assets/repair-iphone-05.webp" data-gallery data-gallery-group="iphone" data-caption="Проверка состояния аккумулятора iPhone" aria-label="Увеличить фото — Проверка состояния аккумулятора iPhone">
+          </a><!-- /CMS_PHOTO -->
+          <!-- CMS_PHOTO:iphone-05 --><a href="assets/repair-iphone-05.webp" data-gallery data-gallery-group="iphone" data-caption="Проверка состояния аккумулятора iPhone" aria-label="Увеличить фото — Проверка состояния аккумулятора iPhone">
             <img src="assets/repair-iphone-05.webp" alt="Проверка состояния аккумулятора iPhone" width="960" height="1280" loading="lazy" decoding="async">
-          </a>
-          <a href="assets/repair-iphone-06.webp" data-gallery data-gallery-group="iphone" data-caption="Два iPhone на рабочем коврике" aria-label="Увеличить фото — Два iPhone на рабочем коврике">
+          </a><!-- /CMS_PHOTO -->
+          <!-- CMS_PHOTO:iphone-06 --><a href="assets/repair-iphone-06.webp" data-gallery data-gallery-group="iphone" data-caption="Два iPhone на рабочем коврике" aria-label="Увеличить фото — Два iPhone на рабочем коврике">
             <img src="assets/repair-iphone-06.webp" alt="Два iPhone на рабочем коврике" width="960" height="1280" loading="lazy" decoding="async">
-          </a>
+          </a><!-- /CMS_PHOTO -->
+          <!-- CMS_GALLERY:iphone:iphone -->
         </div>
       </div>
     </section>
@@ -190,10 +191,11 @@
           <article class="catalog-case"><h4>Redmi</h4><p>Ремонт смартфона</p></article>
         </div>
       </div>
-      <figure class="catalog-media catalog-android-photo">
+      <!-- CMS_PHOTO:android-phones --><figure class="catalog-media catalog-android-photo">
         <img src="assets/workshop-phones.webp" alt="Смартфоны Android в мастерской" width="1050" height="1400" loading="lazy" decoding="async">
         <figcaption>Смартфоны Android в мастерской</figcaption>
-      </figure>
+      </figure><!-- /CMS_PHOTO -->
+      <div class="photo-wall photo-wall-android"><!-- CMS_GALLERY:android:android --></div>
     </section>
 
     <section class="catalog-panel" id="computers" aria-labelledby="computers-title" data-catalog-panel tabindex="-1">
@@ -209,6 +211,7 @@
             <li>Ремонт и замена комплектующих</li>
             <li>Установка и настройка программ</li>
             <li>Подбор комплектующих и сборка ПК</li>
+            <li id="gpu-thermal-pads">Замена термопрокладок на видеокарте</li>
           </ul>
           <div class="catalog-actions"><a class="button button-primary" href="https://max.ru/join/U9VbQL_vIRLtYc8kHAHTy1KnC3-s3BVJSdOzQISSQKc" target="_blank" rel="noopener noreferrer">Чат в MAX<svg class="icon" aria-hidden="true"><use href="#i-up-right"></use></svg></a></div>
         </div>
@@ -220,27 +223,67 @@
       <div class="catalog-examples">
         <h3>Примеры работ</h3>
         <div class="catalog-cases">
-          <article class="catalog-case"><h4>Игровой ПК</h4><p>Сборка на Intel Core i5‑12400F и GeForce RTX 3060</p></article>
+          <article class="catalog-case catalog-build">
+            <div>
+              <h4>Игровой ПК на Core i5 и RTX 3060</h4>
+              <dl class="catalog-build-specs">
+                <div><dt>Процессор</dt><dd>Intel Core i5‑12400F, 12-е поколение</dd></div>
+                <div><dt>Видеокарта</dt><dd>GeForce RTX 3060, 12 ГБ</dd></div>
+                <div><dt>Оперативная память</dt><dd>32 ГБ DDR4</dd></div>
+                <div><dt>Накопитель</dt><dd>SSD M.2, 1 ТБ</dd></div>
+                <div><dt>Материнская плата</dt><dd>MSI PRO H610M‑E DDR4</dd></div>
+                <div><dt>Блок питания</dt><dd>600 Вт</dd></div>
+                <div><dt>Корпус и охлаждение</dt><dd>Панорамное стекло, вентиляторы и контроллер RGB</dd></div>
+              </dl>
+            </div>
+            <figure class="catalog-video catalog-demo">
+              <div class="catalog-video-stage">
+                <video controls playsinline preload="none" src="assets/service-works/pc-build-video.mp4" poster="assets/service-works/pc-build-video.webp" aria-labelledby="pc-build-video-caption"></video>
+              </div>
+              <figcaption id="pc-build-video-caption">Готовая сборка с RGB-подсветкой</figcaption>
+            </figure>
+          </article>
+        </div>
+        <div class="cms-photo-grid catalog-build-photos photo-wall photo-wall-pair">
+          <!-- CMS_PHOTO:pc-build-closeup --><a class="cms-gallery-photo" href="assets/service-works/pc-rgb-closeup.webp" data-gallery data-gallery-group="pc-build" data-caption="Готовая сборка крупным планом">
+            <img src="assets/service-works/pc-rgb-closeup.webp" alt="Игровой ПК с RGB-подсветкой и панорамным стеклом" width="1440" height="1080" loading="lazy" decoding="async">
+            <span>Готовая сборка крупным планом</span>
+          </a><!-- /CMS_PHOTO -->
+          <!-- CMS_PHOTO:pc-build-at-counter --><a class="cms-gallery-photo" href="assets/service-works/pc-rgb-at-counter.webp" data-gallery data-gallery-group="pc-build" data-caption="Собранный ПК на стойке">
+            <img src="assets/service-works/pc-rgb-at-counter.webp" alt="Сотрудница мастерской рядом с собранным ПК с красной подсветкой" width="1440" height="1080" loading="lazy" decoding="async">
+            <span>Собранный ПК на стойке</span>
+          </a><!-- /CMS_PHOTO -->
+          <!-- CMS_GALLERY:pc-build:pc-build -->
         </div>
       </div>
       <div class="catalog-photo-section">
         <h3>Фото сборки и обслуживания ПК</h3>
-        <div class="catalog-photo-grid catalog-works-grid">
-          <a href="assets/service-works/pc-assembled-components.webp" data-gallery data-gallery-group="computers" data-caption="Системный блок с подсветкой" aria-label="Увеличить фото — системный блок с подсветкой">
+        <div class="catalog-photo-grid catalog-works-grid photo-wall">
+          <!-- CMS_PHOTO:computers-01 --><a href="assets/service-works/pc-assembled-components.webp" data-gallery data-gallery-group="computers" data-caption="Системный блок с подсветкой" aria-label="Увеличить фото — системный блок с подсветкой">
             <img src="assets/service-works/pc-assembled-components.webp" alt="Системный блок с подсветкой" width="900" height="1600" loading="lazy" decoding="async">
-          </a>
-          <a href="assets/service-works/pc-motherboard.webp" data-gallery data-gallery-group="computers" data-caption="Материнская плата в корпусе" aria-label="Увеличить фото — материнская плата в корпусе">
+          </a><!-- /CMS_PHOTO -->
+          <!-- CMS_PHOTO:computers-02 --><a href="assets/service-works/pc-motherboard.webp" data-gallery data-gallery-group="computers" data-caption="Материнская плата в корпусе" aria-label="Увеличить фото — материнская плата в корпусе">
             <img src="assets/service-works/pc-motherboard.webp" alt="Материнская плата в корпусе" width="1200" height="1600" loading="lazy" decoding="async">
-          </a>
-          <a href="assets/service-works/pc-cooler.webp" data-gallery data-gallery-group="computers" data-caption="Работа с процессорным кулером" aria-label="Увеличить фото — работа с процессорным кулером">
+          </a><!-- /CMS_PHOTO -->
+          <!-- CMS_PHOTO:computers-03 --><a href="assets/service-works/pc-cooler.webp" data-gallery data-gallery-group="computers" data-caption="Работа с процессорным кулером" aria-label="Увеличить фото — работа с процессорным кулером">
             <img src="assets/service-works/pc-cooler.webp" alt="Работа с процессорным кулером" width="900" height="1600" loading="lazy" decoding="async">
-          </a>
-          <a href="assets/service-works/pc-memory.webp" data-gallery data-gallery-group="computers" data-caption="Обслуживание модуля памяти" aria-label="Увеличить фото — обслуживание модуля памяти">
+          </a><!-- /CMS_PHOTO -->
+          <!-- CMS_PHOTO:computers-04 --><a href="assets/service-works/pc-memory.webp" data-gallery data-gallery-group="computers" data-caption="Обслуживание модуля памяти" aria-label="Увеличить фото — обслуживание модуля памяти">
             <img src="assets/service-works/pc-memory.webp" alt="Обслуживание модуля памяти" width="1200" height="1600" loading="lazy" decoding="async">
-          </a>
-          <a href="assets/service-works/pc-finished-build.webp" data-gallery data-gallery-group="computers" data-caption="Собранный компьютер в мастерской" aria-label="Увеличить фото — собранный компьютер в мастерской">
+          </a><!-- /CMS_PHOTO -->
+          <!-- CMS_PHOTO:computers-05 --><a href="assets/service-works/pc-finished-build.webp" data-gallery data-gallery-group="computers" data-caption="Собранный компьютер в мастерской" aria-label="Увеличить фото — собранный компьютер в мастерской">
             <img src="assets/service-works/pc-finished-build.webp" alt="Собранный компьютер в мастерской" width="1395" height="1600" loading="lazy" decoding="async">
-          </a>
+          </a><!-- /CMS_PHOTO -->
+          <!-- CMS_PHOTO:computers-geforce-case --><a href="assets/service-works/pc-geforce-case.webp" data-gallery data-gallery-group="computers" data-caption="Системный блок с GeForce RTX">
+            <img src="assets/service-works/pc-geforce-case.webp" alt="Видеокарта GeForce RTX за стеклянной панелью корпуса" width="1440" height="1080" loading="lazy" decoding="async">
+          </a><!-- /CMS_PHOTO -->
+          <!-- CMS_PHOTO:computers-radeon-components --><a href="assets/service-works/pc-radeon-components.webp" data-gallery data-gallery-group="computers" data-caption="Комплектующие ПК с Radeon">
+            <img src="assets/service-works/pc-radeon-components.webp" alt="Открытый корпус с видеокартой Radeon и вентиляторами с красной подсветкой" width="1440" height="1080" loading="lazy" decoding="async">
+          </a><!-- /CMS_PHOTO -->
+          <!-- CMS_PHOTO:computers-test-bench --><a href="assets/service-works/pc-on-test-bench.webp" data-gallery data-gallery-group="computers" data-caption="ПК на рабочем столе">
+            <img src="assets/service-works/pc-on-test-bench.webp" alt="Мастер у рабочего стола рядом с системным блоком" width="1080" height="1440" loading="lazy" decoding="async">
+          </a><!-- /CMS_PHOTO -->
+          <!-- CMS_GALLERY:computers:computers -->
         </div>
       </div>
     </section>
@@ -273,7 +316,7 @@
       <a class="catalog-return p-text-link" href="#catalog"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>К списку услуг</a>
       <div class="catalog-panel-grid has-media">
         <div class="catalog-repairs">
-          <h2 id="macbook-title">MacBook</h2>
+          <h2 id="macbook-title">Ремонт MacBook</h2>
           <p class="catalog-lead">Помогаем с неисправностями и обслуживанием ноутбуков Apple.</p>
           <h3>Что делаем</h3>
           <ul class="catalog-repair-list">
@@ -286,13 +329,26 @@
         </div>
         <figure class="catalog-collage">
           <div class="catalog-collage-grid">
-            <img src="assets/repair-macbook-01.webp" alt="Нижняя крышка MacBook Pro" width="960" height="1280" loading="lazy" decoding="async">
-            <img src="assets/repair-macbook-04.webp" alt="Разобранный MacBook с аккумулятором и системой охлаждения" width="960" height="1280" loading="lazy" decoding="async">
-            <img src="assets/repair-macbook-03.webp" alt="Снятая плата MacBook" width="960" height="1280" loading="lazy" decoding="async">
-            <img src="assets/repair-macbook-02.webp" alt="Крупный план участка платы MacBook" width="960" height="1280" loading="lazy" decoding="async">
+            <!-- CMS_PHOTO:macbook-detail-01 --><img src="assets/repair-macbook-01.webp" alt="Нижняя крышка MacBook Pro" width="960" height="1280" loading="lazy" decoding="async"><!-- /CMS_PHOTO -->
+            <!-- CMS_PHOTO:macbook-detail-04 --><img src="assets/repair-macbook-04.webp" alt="Разобранный MacBook с аккумулятором и системой охлаждения" width="960" height="1280" loading="lazy" decoding="async"><!-- /CMS_PHOTO -->
+            <!-- CMS_PHOTO:macbook-detail-03 --><img src="assets/repair-macbook-03.webp" alt="Снятая плата MacBook" width="960" height="1280" loading="lazy" decoding="async"><!-- /CMS_PHOTO -->
+            <!-- CMS_PHOTO:macbook-detail-02 --><img src="assets/repair-macbook-02.webp" alt="Крупный план участка платы MacBook" width="960" height="1280" loading="lazy" decoding="async"><!-- /CMS_PHOTO -->
           </div>
-          <figcaption>MacBook Pro в мастерской · четыре ракурса</figcaption>
+          <figcaption>MacBook Pro в мастерской</figcaption>
         </figure>
+      </div>
+      <div class="cms-photo-grid photo-wall photo-wall-pair">
+        <!-- CMS_PHOTO:macbook-archive --><figure class="catalog-media catalog-macbook-archive" id="macbook-archive-photo">
+          <a href="assets/service-works/macbook-at-mira.webp" data-gallery data-gallery-group="macbook" data-caption="MacBook в мастерской на улице Мира" aria-label="Увеличить архивное фото MacBook">
+            <img src="assets/service-works/macbook-at-mira.webp" alt="Сотрудница за стойкой старой мастерской с открытым MacBook" width="1280" height="960" loading="lazy" decoding="async">
+          </a>
+          <figcaption>MacBook в мастерской на улице Мира · <a class="p-text-link" href="https://2gis.ru/chelyabinsk/gallery/firm/70000001096238225/photoId/30258560276235279" target="_blank" rel="noopener noreferrer">Фото из 2ГИС</a></figcaption>
+        </figure><!-- /CMS_PHOTO -->
+        <!-- CMS_PHOTO:macbook-reception --><a class="cms-gallery-photo" href="assets/service-works/macbook-at-reception.webp" data-gallery data-gallery-group="macbook" data-caption="MacBook на стойке приёма">
+          <img src="assets/service-works/macbook-at-reception.webp" alt="Сотрудница за стойкой с MacBook и ноутбуком InnJoo" width="1440" height="1080" loading="lazy" decoding="async">
+          <span>MacBook на стойке приёма</span>
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_GALLERY:macbook:macbook -->
       </div>
     </section>
 
@@ -313,13 +369,14 @@
       </div>
       <div class="catalog-photo-section">
         <h3>Ремонт планшета под микроскопом</h3>
-        <div class="catalog-photo-grid catalog-works-grid">
-          <a href="assets/service-works/tablet-under-microscope.webp" data-gallery data-gallery-group="tablets" data-caption="Разобранный планшет под микроскопом" aria-label="Увеличить фото — разобранный планшет под микроскопом">
+        <div class="catalog-photo-grid catalog-works-grid photo-wall">
+          <!-- CMS_PHOTO:tablets-01 --><a href="assets/service-works/tablet-under-microscope.webp" data-gallery data-gallery-group="tablets" data-caption="Разобранный планшет под микроскопом" aria-label="Увеличить фото — разобранный планшет под микроскопом">
             <img src="assets/service-works/tablet-under-microscope.webp" alt="Разобранный планшет под микроскопом" width="1200" height="1600" loading="lazy" decoding="async">
-          </a>
-          <a href="assets/service-works/tablet-board-detail.webp" data-gallery data-gallery-group="tablets" data-caption="Плата планшета крупным планом" aria-label="Увеличить фото — плата планшета крупным планом">
+          </a><!-- /CMS_PHOTO -->
+          <!-- CMS_PHOTO:tablets-02 --><a href="assets/service-works/tablet-board-detail.webp" data-gallery data-gallery-group="tablets" data-caption="Плата планшета крупным планом" aria-label="Увеличить фото — плата планшета крупным планом">
             <img src="assets/service-works/tablet-board-detail.webp" alt="Плата планшета крупным планом" width="1200" height="1600" loading="lazy" decoding="async">
-          </a>
+          </a><!-- /CMS_PHOTO -->
+          <!-- CMS_GALLERY:tablets:tablets -->
         </div>
       </div>
     </section>
@@ -407,6 +464,7 @@
             <li>Чистка от пыли</li>
             <li>Замена термопасты</li>
             <li>Проверка системы охлаждения</li>
+            <li id="gpu-thermal-pads-maintenance">Замена термопрокладок на видеокарте</li>
           </ul>
           <div class="catalog-actions"><a class="button button-primary" href="https://max.ru/join/U9VbQL_vIRLtYc8kHAHTy1KnC3-s3BVJSdOzQISSQKc" target="_blank" rel="noopener noreferrer">Чат в MAX<svg class="icon" aria-hidden="true"><use href="#i-up-right"></use></svg></a></div>
         </div>
@@ -436,7 +494,7 @@
 
     <section class="catalog-panel" id="protection" aria-labelledby="protection-title" data-catalog-panel tabindex="-1">
       <a class="catalog-return p-text-link" href="#catalog"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>К списку услуг</a>
-      <div class="catalog-panel-grid">
+      <div class="catalog-panel-grid has-media">
         <div class="catalog-repairs">
           <h2 id="protection-title">Защитные стёкла и плёнки</h2>
           <p class="catalog-lead">Подберём защиту экрана по модели устройства. Совместимость и наличие уточняйте в мастерской.</p>
@@ -444,9 +502,19 @@
           <ul class="catalog-repair-list">
             <li>Поклейка защитного стекла</li>
             <li>Поклейка защитной плёнки</li>
+            <li>Поклейка полиуретановой плёнки</li>
           </ul>
           <div class="catalog-actions"><a class="button button-primary" href="https://max.ru/join/U9VbQL_vIRLtYc8kHAHTy1KnC3-s3BVJSdOzQISSQKc" target="_blank" rel="noopener noreferrer">Чат в MAX<svg class="icon" aria-hidden="true"><use href="#i-up-right"></use></svg></a></div>
         </div>
+        <figure class="catalog-video catalog-demo">
+          <div class="catalog-video-stage">
+            <video controls playsinline preload="none" src="assets/service-works/film-test-01.mp4" poster="assets/service-works/film-test-01.webp" aria-labelledby="film-test-caption" aria-describedby="film-test-description"></video>
+          </div>
+          <figcaption>
+            <strong id="film-test-caption">Тест полиуретановой плёнки на Samsung Galaxy S20 FE</strong>
+            <p id="film-test-description">Для демонстрации взяли телефон-донор с повреждённым углом дисплея. Мастер постукивает по плёнке металлической ложкой и показывает экран крупным планом.</p>
+          </figcaption>
+        </figure>
       </div>
     </section>
 

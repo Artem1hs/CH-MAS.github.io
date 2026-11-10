@@ -44,6 +44,9 @@
 
     for (const panel of panels) {
       panel.hidden = panel !== selection;
+      if (panel.hidden) {
+        for (const player of panel.querySelectorAll('video[controls]')) player.pause();
+      }
     }
     for (const choice of choices) {
       if (choice.hash === location.hash) choice.setAttribute('aria-current', 'location');

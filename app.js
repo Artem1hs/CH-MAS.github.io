@@ -1,6 +1,17 @@
 (() => {
   'use strict';
 
+  const editorMode = document.querySelector('#cms-inline-edit, #cms-inline-view');
+  if (editorMode) {
+    const syncEditorSection = () => {
+      const url = new URL(editorMode.href);
+      url.hash = window.location.hash;
+      editorMode.href = url.href;
+    };
+    syncEditorSection();
+    window.addEventListener('hashchange', syncEditorSection);
+  }
+
   const menuButton = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
   if (menuButton && navLinks) {

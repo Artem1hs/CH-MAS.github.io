@@ -11,11 +11,12 @@
   <meta property="og:locale" content="ru_RU">
   <link rel="icon" href="assets/logo.png" type="image/png">
   <link rel="preload" href="assets/fonts/manrope-variable.ttf" as="font" type="font/ttf" crossorigin="">
-<link rel="stylesheet" href="minimal.css?v=11">
-  <link rel="stylesheet" href="home.css?v=27">
-  <link rel="stylesheet" href="home-sections.css?v=6">
+<link rel="stylesheet" href="minimal.css?v=12">
+  <link rel="stylesheet" href="home.css?v=28">
+  <link rel="stylesheet" href="home-sections.css?v=7">
   <link rel="stylesheet" href="workshop-life.css">
   <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="photo-wall.css?v=1">
   <link rel="preload" href="assets/hero-disassembly-poster.jpg?v=2" as="image" fetchpriority="high">
   <script src="app.js" defer=""></script>
   <script src="home.js?v=7" defer=""></script>
@@ -94,10 +95,10 @@
       <a class="p-text-link workshop-life-link" href="workshop.html#workshop-life">Больше кадров<svg class="icon" aria-hidden="true"><use href="#i-up-right"></use></svg></a>
     </header>
     <div class="workshop-life-preview">
-      <a class="workshop-life-photo workshop-life-photo-lead" href="assets/workshop-life/visitors-counter.webp" data-gallery data-gallery-group="reception" data-caption="Клиенты в мастерской" aria-label="Увеличить фото клиентов в мастерской">
+      <!-- CMS_PHOTO:home-reception-01 --><a class="workshop-life-photo workshop-life-photo-lead" href="assets/workshop-life/visitors-counter.webp" data-gallery data-gallery-group="reception" data-caption="Клиенты в мастерской" aria-label="Увеличить фото клиентов в мастерской">
         <img class="workshop-life-media" src="assets/workshop-life/visitors-counter.webp" alt="Посетители собрались у стойки приёма в мастерской" width="1600" height="1200" loading="lazy" decoding="async">
         <span class="workshop-life-caption">Клиенты в мастерской</span>
-      </a>
+      </a><!-- /CMS_PHOTO -->
       <figure class="workshop-life-clip">
         <video class="workshop-life-media" controls autoplay muted loop playsinline preload="none" src="assets/workshop-life/clip-1.mp4" poster="assets/workshop-life/clip-1.webp" aria-labelledby="workshop-life-clip-1-title"></video>
         <button class="workshop-life-sound" type="button" data-workshop-life-sound aria-label="Звук видео о замене аккумулятора" aria-pressed="false" hidden>
@@ -113,7 +114,7 @@
         <figcaption class="workshop-life-clip-caption" id="workshop-life-clip-2-title"><span>Видео клиента</span><strong>Ремонт экрана</strong></figcaption>
       </figure>
     </div>
-    <div class="workshop-life-preview workshop-life-preview-more">
+    <div class="workshop-life-preview workshop-life-preview-more photo-wall photo-wall-media">
       <figure class="workshop-life-clip workshop-life-reception-video">
         <video class="workshop-life-media" controls autoplay muted loop playsinline preload="none" src="assets/workshop-life/counter-new.mp4" poster="assets/workshop-life/counter-new.webp" aria-labelledby="workshop-life-reception-video-title"></video>
         <button class="workshop-life-sound" type="button" data-workshop-life-sound aria-label="Звук видео у стойки приёма" aria-pressed="false" hidden>
@@ -121,14 +122,15 @@
         </button>
         <figcaption class="workshop-life-clip-caption" id="workshop-life-reception-video-title"><span>У стойки приёма</span><strong>Проверка телевизора</strong></figcaption>
       </figure>
-      <a class="workshop-life-photo workshop-life-photo-portrait" href="assets/workshop-life/visitors-portrait.webp" data-gallery data-gallery-group="reception" data-caption="Клиенты в мастерской" aria-label="Увеличить портрет клиента в мастерской">
+      <!-- CMS_PHOTO:home-reception-02 --><a class="workshop-life-photo workshop-life-photo-portrait" href="assets/workshop-life/visitors-portrait.webp" data-gallery data-gallery-group="reception" data-caption="Клиенты в мастерской" aria-label="Увеличить портрет клиента в мастерской">
         <img class="workshop-life-media" src="assets/workshop-life/visitors-portrait.webp" alt="Посетительница на фоне людей у стойки приёма" width="884" height="1334" loading="lazy" decoding="async">
         <span class="workshop-life-caption">Клиенты в мастерской</span>
-      </a>
-      <a class="workshop-life-photo" href="assets/workshop-life/reception-team.webp" data-gallery data-gallery-group="reception" data-caption="Команда за стойкой" aria-label="Увеличить фото команды за стойкой">
+      </a><!-- /CMS_PHOTO -->
+      <!-- CMS_PHOTO:home-reception-03 --><a class="workshop-life-photo" href="assets/workshop-life/reception-team.webp" data-gallery data-gallery-group="reception" data-caption="Команда за стойкой" aria-label="Увеличить фото команды за стойкой">
         <img class="workshop-life-media" src="assets/workshop-life/reception-team.webp" alt="Двое сотрудников сидят за стойкой приёма мастерской" width="1600" height="1200" loading="lazy" decoding="async">
         <span class="workshop-life-caption">Команда за стойкой</span>
-      </a>
+      </a><!-- /CMS_PHOTO -->
+      <!-- CMS_GALLERY:home-reception:reception -->
     </div>
     <a class="p-text-link workshop-life-link workshop-life-works" href="workshop.html#work">Наши работы<svg class="icon" aria-hidden="true"><use href="#i-up-right"></use></svg></a>
   </section>
@@ -170,8 +172,19 @@
       <a href="services.html#screens"><svg class="icon" aria-hidden="true"><use href="#i-tv"></use></svg>Телевизоры, аудио и видео</a>
       <a href="services.html#software"><svg class="icon" aria-hidden="true"><use href="#i-tool"></use></svg>Программы и прошивка</a>
       <a href="services.html#protection"><svg class="icon" aria-hidden="true"><use href="#i-mobile"></use></svg>Защитные стёкла и плёнки</a>
+      <a id="macbook-service-link" href="services.html#macbook"><svg class="icon" aria-hidden="true"><use href="#i-laptop"></use></svg>Ремонт MacBook</a>
     </div>
     <div class="p-help" data-reveal=""><p>Не нашли свою технику? Укажите модель и опишите неисправность.</p><a class="p-text-link" href="https://max.ru/join/U9VbQL_vIRLtYc8kHAHTy1KnC3-s3BVJSdOzQISSQKc" target="_blank" rel="noopener noreferrer">Спросить о ремонте<svg class="icon" aria-hidden="true"><use href="#i-up-right"></use></svg></a></div>
+  </section>
+
+  <section class="p-veterans shell" id="veterans" aria-labelledby="veterans-title">
+    <div class="p-veterans-card">
+      <div>
+        <h2 id="veterans-title">Скидка ветеранам боевых действий</h2>
+        <p>При предъявлении удостоверения ветерана боевых действий предоставляем скидку на любой ремонт и наклейку защитной плёнки.</p>
+      </div>
+      <a class="p-text-link" href="tel:+79512448811">Уточнить размер скидки<svg class="icon" aria-hidden="true"><use href="#i-up-right"></use></svg></a>
+    </div>
   </section>
 
   <section class="p-workshop p-section shell" id="workshop" aria-labelledby="workshop-title">
@@ -189,27 +202,28 @@
 
   <section class="p-section shell" id="work" aria-labelledby="work-title">
     <div class="p-section-head" data-reveal=""><div><h2 id="work-title">Работа в деталях</h2></div><a class="p-text-link" href="workshop.html">О мастерской<svg class="icon" aria-hidden="true"><use href="#i-up-right"></use></svg></a></div>
-    <div class="p-gallery" aria-label="Фотографии работ и мастерской">
-        <a class="p-gallery-item" data-reveal="" href="assets/graphics-service.webp" data-gallery="" data-caption="Обслуживание видеокарты" aria-label="Увеличить фото: обслуживание видеокарты">
+    <div class="p-gallery photo-wall" aria-label="Фотографии работ и мастерской">
+        <!-- CMS_PHOTO:home-works-01 --><a class="p-gallery-item" data-reveal="" href="assets/graphics-service.webp" data-gallery="" data-caption="Замена термопрокладок на видеокарте" aria-label="Увеличить фото — замена термопрокладок на видеокарте">
           <img src="assets/graphics-service-small.webp" alt="Разобранная видеокарта, радиатор и материалы для обслуживания" width="800" height="1067" loading="lazy">
-          <span class="p-gallery-label"><span>Обслуживание видеокарты</span></span>
-        </a>
-        <a class="p-gallery-item" data-reveal="" href="assets/computer.webp" data-gallery="" data-caption="Компьютер в сборе" aria-label="Увеличить фото: компьютер в сборе">
+          <span class="p-gallery-label"><span>Замена термопрокладок на видеокарте</span></span>
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_PHOTO:home-works-02 --><a class="p-gallery-item" data-reveal="" href="assets/computer.webp" data-gallery="" data-caption="Компьютер в сборе" aria-label="Увеличить фото: компьютер в сборе">
           <img src="assets/computer-small.webp" alt="Собранный системный блок с фиолетовой подсветкой" width="600" height="1067" loading="lazy">
           <span class="p-gallery-label"><span>Компьютер в сборе</span></span>
-        </a>
-        <a class="p-gallery-item" data-reveal="" href="assets/computer-service.webp" data-gallery="" data-caption="Замена термопасты" aria-label="Увеличить фото: замена термопасты">
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_PHOTO:home-works-03 --><a class="p-gallery-item" data-reveal="" href="assets/computer-service.webp" data-gallery="" data-caption="Замена термопасты" aria-label="Увеличить фото: замена термопасты">
           <img src="assets/computer-service-small.webp" alt="Нанесение термопасты на процессор компьютера" width="800" height="1067" loading="lazy">
           <span class="p-gallery-label"><span>Замена термопасты</span></span>
-        </a>
-        <a class="p-gallery-item" data-reveal="" href="assets/workshop-team.webp" data-gallery="" data-caption="В нашей мастерской" aria-label="Увеличить фото: в нашей мастерской">
-          <img src="assets/workshop-team-small.webp" alt="Фото из мастерской: девушка рядом с собранным компьютером" width="600" height="800" loading="lazy">
-          <span class="p-gallery-label"><span>В нашей мастерской</span></span>
-        </a>
-        <a class="p-gallery-item" data-reveal="" href="assets/storefront.webp" data-gallery="" data-caption="шоссе Металлургов, 70" aria-label="Увеличить фото: шоссе Металлургов, 70">
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_PHOTO:home-works-04 --><a class="p-gallery-item" data-reveal="" href="assets/workshop-life/two-pc-technicians.webp" data-gallery="" data-caption="Мастера за работой" aria-label="Увеличить фото — мастера за работой">
+          <img src="assets/workshop-life/two-pc-technicians.webp" alt="Два мастера работают с открытыми системными блоками" width="1400" height="1269" loading="lazy" decoding="async">
+          <span class="p-gallery-label"><span>Мастера за работой</span></span>
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_PHOTO:home-works-05 --><a class="p-gallery-item" data-reveal="" href="assets/storefront.webp" data-gallery="" data-caption="шоссе Металлургов, 70" aria-label="Увеличить фото: шоссе Металлургов, 70">
           <img src="assets/storefront.webp" alt="Вывеска и вход в Честную мастерскую на шоссе Металлургов, 70" width="1744" height="1430" loading="lazy">
           <span class="p-gallery-label"><span>шоссе Металлургов, 70</span></span>
-        </a>
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_GALLERY:home-works -->
     </div>
   </section>
 

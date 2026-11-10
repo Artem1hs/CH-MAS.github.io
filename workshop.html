@@ -12,10 +12,11 @@
   <meta property="og:locale" content="ru_RU">
   <link rel="icon" href="assets/logo.png" type="image/png">
   <link rel="preload" href="assets/fonts/manrope-variable.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="minimal.css?v=11">
+  <link rel="stylesheet" href="minimal.css?v=12">
   <link rel="stylesheet" href="home.css?v=27">
   <link rel="stylesheet" href="workshop-page.css?v=1">
   <link rel="stylesheet" href="workshop-life.css">
+  <link rel="stylesheet" href="photo-wall.css?v=1">
   <script src="app.js" defer></script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"LocalBusiness","name":"Честная мастерская","description":"Ремонт телефонов, компьютеров и другой электроники","telephone":"+79512448811","email":"masterskaya74@list.ru","address":{"@type":"PostalAddress","streetAddress":"шоссе Металлургов, 70","addressLocality":"Челябинск","addressCountry":"RU"},"openingHours":["Mo-Su 10:00-20:00"]}
@@ -102,20 +103,23 @@
         </div>
         <a class="p-text-link workshop-life-link" href="#work">Наши работы<svg class="icon" aria-hidden="true"><use href="#i-up-right"></use></svg></a>
       </header>
-      <div class="workshop-life-photos">
-        <a class="workshop-life-photo workshop-life-photo-lead" href="assets/workshop-life/visitors-counter.webp" data-gallery data-caption="Посетители у стойки приёма" aria-label="Увеличить фото посетителей у стойки">
+      <div class="workshop-life-photos photo-wall">
+        <!-- CMS_PHOTO:workshop-reception-01 --><a class="workshop-life-photo workshop-life-photo-lead" href="assets/workshop-life/visitors-counter.webp" data-gallery data-caption="Посетители у стойки приёма" aria-label="Увеличить фото посетителей у стойки">
           <img class="workshop-life-media" src="assets/workshop-life/visitors-counter.webp" alt="Посетители собрались у стойки приёма в мастерской" width="1600" height="1200" loading="lazy" decoding="async">
           <span class="workshop-life-caption">У стойки приёма</span>
-        </a>
-        <a class="workshop-life-photo" href="assets/workshop-life/visitors-at-workshop.webp" data-gallery data-caption="В зале мастерской" aria-label="Увеличить фото из зала мастерской">
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_PHOTO:workshop-reception-02 --><a class="workshop-life-photo" href="assets/workshop-life/visitors-at-workshop.webp" data-gallery data-caption="В зале мастерской" aria-label="Увеличить фото из зала мастерской">
           <img class="workshop-life-media" src="assets/workshop-life/visitors-at-workshop.webp" alt="Посетители возле стойки и витрины с аксессуарами" width="804" height="720" loading="lazy" decoding="async">
           <span class="workshop-life-caption">В зале</span>
-        </a>
-        <a class="workshop-life-photo workshop-life-photo-portrait" href="assets/workshop-life/visitors-portrait.webp" data-gallery data-caption="Кадр из мастерской" aria-label="Увеличить фото из мастерской">
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_PHOTO:workshop-reception-03 --><a class="workshop-life-photo workshop-life-photo-portrait" href="assets/workshop-life/visitors-portrait.webp" data-gallery data-caption="Кадр из мастерской" aria-label="Увеличить фото из мастерской">
           <img class="workshop-life-media" src="assets/workshop-life/visitors-portrait.webp" alt="Портрет на фоне стойки приёма" width="884" height="1334" loading="lazy" decoding="async">
           <span class="workshop-life-caption">Кадр из мастерской</span>
-        </a>
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_GALLERY:workshop-reception -->
       </div>
+      <!-- Preserve inline editor field IDs for the following video row. -->
+      <div hidden></div>
       <div class="workshop-life-video-row">
         <figure class="workshop-life-clip">
           <video class="workshop-life-media" controls playsinline preload="none" src="assets/workshop-life/clip-1.mp4" poster="assets/workshop-life/clip-1.webp" aria-labelledby="workshop-life-clip-1-title"></video>
@@ -130,49 +134,66 @@
 
     <section class="workshop-section" id="work" aria-labelledby="work-title">
       <div class="workshop-heading"><h2 id="work-title">Мастерская в деталях</h2></div>
-      <div class="workshop-gallery-featured">
-        <a class="workshop-photo" href="assets/workshop-reception.webp" data-gallery data-caption="Зона приёма" aria-label="Увеличить фото — зона приёма">
+      <div class="workshop-gallery-featured photo-wall photo-wall-pair">
+        <!-- CMS_PHOTO:workshop-works-01 --><a class="workshop-photo" href="assets/workshop-reception.webp" data-gallery data-caption="Зона приёма" aria-label="Увеличить фото — зона приёма">
           <img src="assets/workshop-reception.webp" alt="Стойка приёма с фирменной моделью автомобиля и витрина мастерской" width="1400" height="1050" loading="lazy" decoding="async">
           <span class="workshop-photo-caption">Зона приёма</span>
-        </a>
-        <a class="workshop-photo" href="assets/workshop-pc.webp" data-gallery data-caption="Сборка компьютеров" aria-label="Увеличить фото — сборка компьютеров">
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_PHOTO:workshop-works-02 --><a class="workshop-photo" href="assets/workshop-pc.webp" data-gallery data-caption="Сборка компьютеров" aria-label="Увеличить фото — сборка компьютеров">
           <img src="assets/workshop-pc.webp" alt="Сотрудница мастерской рядом с системным блоком и наградой Яндекс Карт" width="1400" height="1193" loading="lazy" decoding="async">
           <span class="workshop-photo-caption">Сборка компьютеров</span>
-        </a>
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_PHOTO:workshop-works-03 --><a id="team-electric-car-photo" class="workshop-photo" href="assets/workshop-life/technician-electric-car.webp" data-gallery data-caption="Ремонт детского электромобиля" aria-label="Увеличить фото — ремонт детского электромобиля">
+          <img src="assets/workshop-life/technician-electric-car.webp" alt="Сотрудница мастерской с отвёрткой у руля детского электромобиля" width="1440" height="1080" loading="lazy" decoding="async">
+          <span class="workshop-photo-caption">Ремонт детского электромобиля</span>
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_PHOTO:workshop-works-04 --><a id="team-reception-photo" class="workshop-photo" href="assets/workshop-life/technician-reception.webp" data-gallery data-caption="За стойкой приёма" aria-label="Увеличить фото — за стойкой приёма">
+          <img src="assets/workshop-life/technician-reception.webp" alt="Сотрудница мастерской оформляет документы за стойкой приёма" width="1440" height="1080" loading="lazy" decoding="async">
+          <span class="workshop-photo-caption">За стойкой приёма</span>
+        </a><!-- /CMS_PHOTO -->
       </div>
-      <div class="workshop-gallery">
-        <a class="workshop-photo" href="assets/workshop-display.webp" data-gallery data-caption="Работа с дисплеем" aria-label="Увеличить фото — работа с дисплеем">
+      <div class="workshop-gallery photo-wall">
+        <!-- CMS_PHOTO:workshop-works-05 --><a class="workshop-photo" href="assets/workshop-display.webp" data-gallery data-caption="Работа с дисплеем" aria-label="Увеличить фото — работа с дисплеем">
           <img src="assets/workshop-display.webp" alt="Мастер работает с дисплеем смартфона за рабочим столом" width="1400" height="1050" loading="lazy" decoding="async">
           <span class="workshop-photo-caption">Работа с дисплеем</span>
-        </a>
-        <a class="workshop-photo" href="assets/workshop-board.webp" data-gallery data-caption="Плата под микроскопом" aria-label="Увеличить фото — плата под микроскопом">
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_PHOTO:workshop-works-06 --><a class="workshop-photo" href="assets/workshop-board.webp" data-gallery data-caption="Плата под микроскопом" aria-label="Увеличить фото — плата под микроскопом">
           <img src="assets/workshop-board.webp" alt="Печатная плата на рабочем столе под микроскопом" width="1050" height="1400" loading="lazy" decoding="async">
           <span class="workshop-photo-caption">Плата под микроскопом</span>
-        </a>
-        <a class="workshop-photo" href="assets/workshop-phones.webp" data-gallery data-caption="Смартфоны в мастерской" aria-label="Увеличить фото — смартфоны в мастерской">
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_PHOTO:workshop-works-07 --><a class="workshop-photo" href="assets/workshop-phones.webp" data-gallery data-caption="Смартфоны в мастерской" aria-label="Увеличить фото — смартфоны в мастерской">
           <img src="assets/workshop-phones.webp" alt="Смартфоны Samsung, Honor, Redmi и других брендов на столе" width="1050" height="1400" loading="lazy" decoding="async">
           <span class="workshop-photo-caption">Смартфоны в мастерской</span>
-        </a>
-        <a class="workshop-photo" href="assets/graphics-service.webp" data-gallery data-caption="Обслуживание видеокарты" aria-label="Увеличить фото — обслуживание видеокарты">
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_PHOTO:workshop-works-08 --><a class="workshop-photo" href="assets/graphics-service.webp" data-gallery data-caption="Замена термопрокладок на видеокарте" aria-label="Увеличить фото — замена термопрокладок на видеокарте">
           <img src="assets/graphics-service-small.webp" alt="Разобранная видеокарта и радиатор" width="800" height="1067" loading="lazy" decoding="async">
-          <span class="workshop-photo-caption">Обслуживание видеокарты</span>
-        </a>
-        <a class="workshop-photo" href="assets/master-at-work.webp" data-gallery data-caption="Мастер за работой" aria-label="Увеличить фото — мастер за работой">
+          <span class="workshop-photo-caption">Замена термопрокладок на видеокарте</span>
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_PHOTO:workshop-works-09 --><a class="workshop-photo" href="assets/master-at-work.webp" data-gallery data-caption="Мастер за работой" aria-label="Увеличить фото — мастер за работой">
           <img src="assets/master-at-work-small.webp" alt="Мастер ремонтирует телефон за рабочим столом" width="900" height="1200" loading="lazy" decoding="async">
           <span class="workshop-photo-caption">Мастер за работой</span>
-        </a>
-        <a class="workshop-photo" href="assets/computer.webp" data-gallery data-caption="Компьютер в сборе" aria-label="Увеличить фото — компьютер в сборе">
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_PHOTO:workshop-works-10 --><a class="workshop-photo" href="assets/computer.webp" data-gallery data-caption="Компьютер в сборе" aria-label="Увеличить фото — компьютер в сборе">
           <img src="assets/computer-small.webp" alt="Системный блок с фиолетовой подсветкой" width="600" height="1067" loading="lazy" decoding="async">
           <span class="workshop-photo-caption">Компьютер в сборе</span>
-        </a>
-        <a class="workshop-photo" href="assets/computer-service.webp" data-gallery data-caption="Замена термопасты" aria-label="Увеличить фото — замена термопасты">
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_PHOTO:workshop-works-11 --><a class="workshop-photo" href="assets/computer-service.webp" data-gallery data-caption="Замена термопасты" aria-label="Увеличить фото — замена термопасты">
           <img src="assets/computer-service-small.webp" alt="Нанесение термопасты на процессор" width="800" height="1067" loading="lazy" decoding="async">
           <span class="workshop-photo-caption">Замена термопасты</span>
-        </a>
-        <a class="workshop-photo" href="assets/workshop-team.webp" data-gallery data-caption="В мастерской" aria-label="Увеличить фото — в мастерской">
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_PHOTO:workshop-works-12 --><a class="workshop-photo" href="assets/workshop-team.webp" data-gallery data-caption="В мастерской" aria-label="Увеличить фото — в мастерской">
           <img src="assets/workshop-team-small.webp" alt="Сотрудница мастерской рядом с компьютером" width="800" height="1067" loading="lazy" decoding="async">
           <span class="workshop-photo-caption">В мастерской</span>
-        </a>
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_PHOTO:workshop-works-bench --><a class="workshop-photo" href="assets/workshop-life/technicians-at-bench.webp" data-gallery data-caption="За рабочим столом">
+          <img src="assets/workshop-life/technicians-at-bench.webp" alt="Двое сотрудников мастерской работают у монитора" width="1440" height="1080" loading="lazy" decoding="async">
+          <span class="workshop-photo-caption">За рабочим столом</span>
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_PHOTO:workshop-works-entrance --><a class="workshop-photo" href="assets/workshop-life/workshop-entrance-team.webp" data-gallery data-caption="Команда у входа">
+          <img src="assets/workshop-life/workshop-entrance-team.webp" alt="Двое сотрудников у входа с вывеской Честной мастерской" width="1440" height="1080" loading="lazy" decoding="async">
+          <span class="workshop-photo-caption">Команда у входа</span>
+        </a><!-- /CMS_PHOTO -->
+        <!-- CMS_GALLERY:workshop-works -->
       </div>
       <figure class="workshop-life workshop-life-clip workshop-life-feature">
         <video class="workshop-life-media" controls playsinline preload="none" src="assets/workshop-life/repair-backlight.mp4" poster="assets/workshop-life/repair-backlight.webp" aria-labelledby="repair-backlight-title"></video>

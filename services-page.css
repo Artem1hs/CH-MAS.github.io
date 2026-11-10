@@ -315,6 +315,29 @@ h2.catalog-heading,
   line-height: 1.55;
 }
 
+.catalog-build {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(18px, 3vw, 36px);
+}
+
+.catalog-build-specs { display: grid; gap: 0; margin: 12px 0 0; font-size: 13px; }
+.catalog-build-specs > div {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: 8px;
+  padding-block: 7px;
+  border-bottom: 1px solid var(--catalog-line);
+}
+.catalog-build-specs dt { color: var(--catalog-soft); }
+.catalog-build-specs dd { margin: 0; overflow-wrap: anywhere; }
+.catalog-build-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+@media (max-width: 680px) {
+  .catalog-build { grid-template-columns: minmax(0, 1fr); }
+}
+
 .catalog-actions {
   display: flex;
   flex-wrap: wrap;
@@ -406,6 +429,8 @@ h2.catalog-heading,
 .catalog-collage, .catalog-video { min-width: 0; margin: 0; }
 .catalog-collage { justify-self: center; width: min(100%, 350px); }
 #macbook .catalog-panel-grid { margin-top: 20px; }
+.catalog-macbook-archive { width: min(100%, 540px); margin-top: 24px; }
+.catalog-macbook-archive img { aspect-ratio: 4 / 3; max-height: none; }
 .catalog-collage-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -417,6 +442,9 @@ h2.catalog-heading,
 }
 .catalog-collage figcaption, .catalog-video figcaption { margin-top: 8px; color: var(--catalog-soft); font-size: 12px; }
 .catalog-video { justify-self: center; width: min(100%, 420px); }
+.catalog-demo { width: min(100%, 540px); }
+.catalog-demo strong { font-size: 14px; color: #edf4ff; }
+.catalog-demo figcaption p { margin: 5px 0 0; line-height: 1.55; }
 .catalog-video-stage { position: relative; overflow: hidden; border: 1px solid var(--catalog-line); border-radius: 18px; background: #060f1d; }
 .catalog-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; }
 .catalog-video-sound {

@@ -1,0 +1,153 @@
+.photo-wall, #android {
+  --photo-height: clamp(150px, 19vw, 270px);
+  --photo-gap: clamp(9px, 1.4vw, 18px);
+}
+
+.photo-wall {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: none;
+  align-items: start;
+  gap: var(--photo-gap);
+}
+
+.photo-wall:not(:has(img, video, [data-cms-add-photo])) { display: none; }
+
+.photo-wall > :not(button) {
+  grid-area: auto;
+  grid-column: span 2;
+  min-width: 0;
+}
+
+.photo-wall > .cms-inline-photo-tile { width: auto; margin: 0; }
+.photo-wall-pair { --photo-height: clamp(180px, 28vw, 380px); }
+.photo-wall-pair > :not(button) { grid-column: span 3; }
+
+/* Count the tiles without the editor button, so both views pack the same rows. */
+@media (min-width: 961px) {
+  .photo-wall:not(.photo-wall-pair) > :nth-child(1 of :not(button)):nth-last-child(3n+5 of :not(button)) {
+    grid-column: span 4;
+  }
+
+  .photo-wall:not(.photo-wall-pair) > :nth-child(3n+1 of :not(button)):nth-last-child(4 of :not(button)),
+  .photo-wall:not(.photo-wall-pair) > :nth-child(3n+1 of :not(button)):nth-last-child(4 of :not(button)) ~ :not(button),
+  .photo-wall:not(.photo-wall-pair) > :nth-child(1 of :not(button)):nth-last-child(-n+2 of :not(button)),
+  .photo-wall:not(.photo-wall-pair) > :nth-child(2 of :not(button)):nth-last-child(1 of :not(button)) {
+    grid-column: span 3;
+  }
+
+  .photo-wall-pair > :nth-child(odd of :not(button)):nth-last-child(3 of :not(button)),
+  .photo-wall-pair > :nth-child(odd of :not(button)):nth-last-child(3 of :not(button)) ~ :not(button) {
+    --photo-height: clamp(150px, 20vw, 300px);
+    grid-column: span 2;
+  }
+}
+
+:is(.photo-wall > a, .photo-wall > .cms-inline-photo-tile > a, .photo-wall .catalog-macbook-archive, #android .catalog-android-photo) {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: var(--photo-height);
+  aspect-ratio: auto;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #b7d4ff3d;
+  border-radius: clamp(12px, 1.6vw, 21px);
+  background: #112845;
+  color: #f6f9ff;
+}
+
+.photo-wall .catalog-macbook-archive > a { display: block; height: 100%; }
+
+:is(.photo-wall > a, .photo-wall > .cms-inline-photo-tile > a, .photo-wall .catalog-macbook-archive > a, #android .catalog-android-photo) > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  aspect-ratio: auto;
+  border: 0;
+  border-radius: 0;
+  object-fit: cover;
+  object-position: 50% 28%;
+}
+
+.photo-wall .workshop-life-photo-portrait > img { object-position: 50% 30%; }
+.photo-wall [href$="/storefront.webp"] > img { object-position: 64% 43%; }
+
+:is(.photo-wall > a, .photo-wall > .cms-inline-photo-tile > a):hover { border-color: #bad8ff9c; }
+.photo-wall a:focus-visible { outline: 2px solid #b9defd; outline-offset: 3px; }
+.photo-wall :is(.p-gallery-label, .workshop-photo-caption, .workshop-life-caption, .cms-gallery-photo > span, .catalog-macbook-archive figcaption),
+#android .catalog-android-photo figcaption,
+.photo-wall > a[data-caption]:not(:has(> span)):not(.cms-gallery-photo)::after,
+.photo-wall .cms-inline-photo-tile > a[data-caption]:not(:has(> span)):not(.cms-gallery-photo)::after {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 1;
+  display: block;
+  margin: 0;
+  padding: clamp(20px, 3vw, 36px) clamp(9px, 1.45vw, 18px) clamp(8px, 1.2vw, 15px);
+  border: 0;
+  background: linear-gradient(transparent, #081222e8);
+  color: #f6f9ff;
+  font-size: clamp(11px, 1.05vw, 14px);
+  font-weight: 650;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  pointer-events: none;
+}
+
+.photo-wall > a[data-caption]:not(:has(> span)):not(.cms-gallery-photo)::after,
+.photo-wall .cms-inline-photo-tile > a[data-caption]:not(:has(> span)):not(.cms-gallery-photo)::after {
+  content: attr(data-caption);
+}
+
+.photo-wall .catalog-macbook-archive figcaption a {
+  display: inline;
+  color: #d3e9ff;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  pointer-events: auto;
+}
+
+.photo-wall-media .workshop-life-clip { min-height: var(--photo-height); }
+.photo-wall-media .workshop-life-clip video {
+  height: var(--photo-height);
+  aspect-ratio: auto;
+}
+
+/* Android's caption keeps its existing editor key by remaining at its source level. */
+#android:not([hidden]) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: var(--photo-gap);
+}
+
+#android > :not(.catalog-android-photo, .cms-inline-photo-tile, .photo-wall-android) { grid-column: 1 / -1; }
+#android > .catalog-return { justify-self: start; }
+#android .photo-wall-android { display: contents; }
+:is(#android .photo-wall-android > :not(button), #android > .catalog-android-photo, #android > .cms-inline-photo-tile) {
+  grid-column: auto;
+  width: auto;
+  margin-top: var(--photo-gap);
+  align-self: start;
+}
+
+#android .catalog-android-photo { width: 100%; margin-top: 0; }
+#android > .catalog-android-photo { margin-top: var(--photo-gap); }
+
+@media (max-width: 960px) {
+  .photo-wall, #android { --photo-height: clamp(130px, 35vw, 290px); }
+  .photo-wall > :not(button) { grid-column: span 3; }
+  .photo-wall:not(.photo-wall-media) > :nth-child(1 of :not(button)):nth-last-child(2n+1 of :not(button)),
+  .photo-wall-media > .workshop-life-reception-video,
+  .photo-wall-media > :nth-child(even of :not(button)):nth-last-child(1 of :not(button)) {
+    --photo-height: clamp(190px, 52vw, 360px);
+    grid-column: 1 / -1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .photo-wall a img { transition: transform .35s ease; }
+  .photo-wall a:hover img { transform: scale(1.035); }
+}
